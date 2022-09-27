@@ -1,0 +1,2836 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "NorthWind Data Service OData API",
+    "description": "NorthWind Data Service OData API.",
+    "version": "1.0"
+  },
+    "servers": [
+    {
+      "url": "https://services.odata.org/V4/Northwind",
+      "description": "OData.org v4"
+    }
+  ],
+  "paths": {
+    "/Northwind.svc/Categories": {
+      "get": {
+        "tags": [
+          "Categories"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "description": "Restricts the set of items returned. The maximum number of expressions is 100. The allowed functions are: allfunctions.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$orderby",
+            "in": "query",
+            "description": "Specifies the order in which items are returned. The maximum number of expressions is 5.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "description": "Limits the number of items returned from a collection.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$skip",
+            "in": "query",
+            "description": "Excludes the specified number of items of the queried collection from the result.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$count",
+            "in": "query",
+            "description": "Indicates whether the total count of items within a collection are returned in the result.",
+            "schema": {
+              "type": "boolean",
+              "default": "False"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Category" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Categories({key})": {
+      "get": {
+        "tags": [
+          "Categories"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Category" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Categories({key})/Products": {
+      "get": {
+        "tags": [
+          "Categories"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "description": "Restricts the set of items returned. The maximum number of expressions is 100. The allowed functions are: allfunctions.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$orderby",
+            "in": "query",
+            "description": "Specifies the order in which items are returned. The maximum number of expressions is 5.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "description": "Limits the number of items returned from a collection.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$skip",
+            "in": "query",
+            "description": "Excludes the specified number of items of the queried collection from the result.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$count",
+            "in": "query",
+            "description": "Indicates whether the total count of items within a collection are returned in the result.",
+            "schema": {
+              "type": "boolean",
+              "default": "False"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Product" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Customers": {
+      "get": {
+        "tags": [
+          "Customers"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "description": "Restricts the set of items returned. The maximum number of expressions is 100. The allowed functions are: allfunctions.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$orderby",
+            "in": "query",
+            "description": "Specifies the order in which items are returned. The maximum number of expressions is 5.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "description": "Limits the number of items returned from a collection.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$skip",
+            "in": "query",
+            "description": "Excludes the specified number of items of the queried collection from the result.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$count",
+            "in": "query",
+            "description": "Indicates whether the total count of items within a collection are returned in the result.",
+            "schema": {
+              "type": "boolean",
+              "default": "False"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Customer" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Customers('{key}')": {
+      "get": {
+        "tags": [
+          "Customers"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Customer" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Customers('{key}')/Orders": {
+      "get": {
+        "tags": [
+          "Customers"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "description": "Restricts the set of items returned. The maximum number of expressions is 100. The allowed functions are: allfunctions.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$orderby",
+            "in": "query",
+            "description": "Specifies the order in which items are returned. The maximum number of expressions is 5.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "description": "Limits the number of items returned from a collection.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$skip",
+            "in": "query",
+            "description": "Excludes the specified number of items of the queried collection from the result.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$count",
+            "in": "query",
+            "description": "Indicates whether the total count of items within a collection are returned in the result.",
+            "schema": {
+              "type": "boolean",
+              "default": "False"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Order" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Employees": {
+      "get": {
+        "tags": [
+          "Employees"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "description": "Restricts the set of items returned. The maximum number of expressions is 100. The allowed functions are: allfunctions.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$orderby",
+            "in": "query",
+            "description": "Specifies the order in which items are returned. The maximum number of expressions is 5.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "description": "Limits the number of items returned from a collection.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$skip",
+            "in": "query",
+            "description": "Excludes the specified number of items of the queried collection from the result.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$count",
+            "in": "query",
+            "description": "Indicates whether the total count of items within a collection are returned in the result.",
+            "schema": {
+              "type": "boolean",
+              "default": "False"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Employee" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Employees({key})": {
+      "get": {
+        "tags": [
+          "Employees"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Employee" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Employees({key})/Superior": {
+      "get": {
+        "tags": [
+          "Employees"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/User" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Employees({key})/Subordinates": {
+      "get": {
+        "tags": [
+          "Employees"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "description": "Restricts the set of items returned. The maximum number of expressions is 100. The allowed functions are: allfunctions.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$orderby",
+            "in": "query",
+            "description": "Specifies the order in which items are returned. The maximum number of expressions is 5.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "description": "Limits the number of items returned from a collection.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$skip",
+            "in": "query",
+            "description": "Excludes the specified number of items of the queried collection from the result.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$count",
+            "in": "query",
+            "description": "Indicates whether the total count of items within a collection are returned in the result.",
+            "schema": {
+              "type": "boolean",
+              "default": "False"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/User" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Employees({key})/Orders": {
+      "get": {
+        "tags": [
+          "Employees"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "description": "Restricts the set of items returned. The maximum number of expressions is 100. The allowed functions are: allfunctions.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$orderby",
+            "in": "query",
+            "description": "Specifies the order in which items are returned. The maximum number of expressions is 5.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "description": "Limits the number of items returned from a collection.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$skip",
+            "in": "query",
+            "description": "Excludes the specified number of items of the queried collection from the result.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$count",
+            "in": "query",
+            "description": "Indicates whether the total count of items within a collection are returned in the result.",
+            "schema": {
+              "type": "boolean",
+              "default": "False"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/User" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Employees({key})/EmployeeTerritories": {
+      "get": {
+        "tags": [
+          "Employees"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "description": "Restricts the set of items returned. The maximum number of expressions is 100. The allowed functions are: allfunctions.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$orderby",
+            "in": "query",
+            "description": "Specifies the order in which items are returned. The maximum number of expressions is 5.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "description": "Limits the number of items returned from a collection.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$skip",
+            "in": "query",
+            "description": "Excludes the specified number of items of the queried collection from the result.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$count",
+            "in": "query",
+            "description": "Indicates whether the total count of items within a collection are returned in the result.",
+            "schema": {
+              "type": "boolean",
+              "default": "False"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/User" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Order_Details": {
+      "get": {
+        "tags": [
+          "OrderDetails"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "description": "Restricts the set of items returned. The maximum number of expressions is 100. The allowed functions are: allfunctions.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$orderby",
+            "in": "query",
+            "description": "Specifies the order in which items are returned. The maximum number of expressions is 5.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "description": "Limits the number of items returned from a collection.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$skip",
+            "in": "query",
+            "description": "Excludes the specified number of items of the queried collection from the result.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$count",
+            "in": "query",
+            "description": "Indicates whether the total count of items within a collection are returned in the result.",
+            "schema": {
+              "type": "boolean",
+              "default": "False"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/OrderDetail" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Order_Details({keyOrderId},{keyProductId})": {
+      "get": {
+        "tags": [
+          "OrderDetails"
+        ],
+        "parameters": [
+          {
+            "name": "keyOrderId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "keyProductId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/OrderDetail" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Order_Details({keyOrderId},{keyProductId})/Order": {
+      "get": {
+        "tags": [
+          "OrderDetails"
+        ],
+        "parameters": [
+          {
+            "name": "keyOrderId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "keyProductId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Order" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Order_Details({keyOrderId},{keyProductId})/Product": {
+      "get": {
+        "tags": [
+          "OrderDetails"
+        ],
+        "parameters": [
+          {
+            "name": "keyOrderId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "keyProductId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Product" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Orders": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "description": "Restricts the set of items returned. The maximum number of expressions is 100. The allowed functions are: allfunctions.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$orderby",
+            "in": "query",
+            "description": "Specifies the order in which items are returned. The maximum number of expressions is 5.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "description": "Limits the number of items returned from a collection.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$skip",
+            "in": "query",
+            "description": "Excludes the specified number of items of the queried collection from the result.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$count",
+            "in": "query",
+            "description": "Indicates whether the total count of items within a collection are returned in the result.",
+            "schema": {
+              "type": "boolean",
+              "default": "False"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Order" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Orders({key})": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/User" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Orders({key})/Customer": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Customer" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Orders({key})/Employee": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/User" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Orders({key})/OrderDetails": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "description": "Restricts the set of items returned. The maximum number of expressions is 100. The allowed functions are: allfunctions.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$orderby",
+            "in": "query",
+            "description": "Specifies the order in which items are returned. The maximum number of expressions is 5.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "description": "Limits the number of items returned from a collection.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$skip",
+            "in": "query",
+            "description": "Excludes the specified number of items of the queried collection from the result.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$count",
+            "in": "query",
+            "description": "Indicates whether the total count of items within a collection are returned in the result.",
+            "schema": {
+              "type": "boolean",
+              "default": "False"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/OrderDetail" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Orders({key})/Shipper": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Shipper" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Products": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "description": "Restricts the set of items returned. The maximum number of expressions is 100. The allowed functions are: allfunctions.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$orderby",
+            "in": "query",
+            "description": "Specifies the order in which items are returned. The maximum number of expressions is 5.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "description": "Limits the number of items returned from a collection.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$skip",
+            "in": "query",
+            "description": "Excludes the specified number of items of the queried collection from the result.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$count",
+            "in": "query",
+            "description": "Indicates whether the total count of items within a collection are returned in the result.",
+            "schema": {
+              "type": "boolean",
+              "default": "False"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Product" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Products({key})": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Product" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Products({key})/Category": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Category" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Products({key})/OrderDetails": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "description": "Restricts the set of items returned. The maximum number of expressions is 100. The allowed functions are: allfunctions.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$orderby",
+            "in": "query",
+            "description": "Specifies the order in which items are returned. The maximum number of expressions is 5.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "description": "Limits the number of items returned from a collection.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$skip",
+            "in": "query",
+            "description": "Excludes the specified number of items of the queried collection from the result.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$count",
+            "in": "query",
+            "description": "Indicates whether the total count of items within a collection are returned in the result.",
+            "schema": {
+              "type": "boolean",
+              "default": "False"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/OrderDetail" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Products({key})/Supplier": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Supplier" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Regions": {
+      "get": {
+        "tags": [
+          "Regions"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "description": "Restricts the set of items returned. The maximum number of expressions is 100. The allowed functions are: allfunctions.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$orderby",
+            "in": "query",
+            "description": "Specifies the order in which items are returned. The maximum number of expressions is 5.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "description": "Limits the number of items returned from a collection.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$skip",
+            "in": "query",
+            "description": "Excludes the specified number of items of the queried collection from the result.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$count",
+            "in": "query",
+            "description": "Indicates whether the total count of items within a collection are returned in the result.",
+            "schema": {
+              "type": "boolean",
+              "default": "False"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Region" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Regions({key})": {
+      "get": {
+        "tags": [
+          "Regions"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/User" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Regions({key})/Territories": {
+      "get": {
+        "tags": [
+          "Regions"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "description": "Restricts the set of items returned. The maximum number of expressions is 100. The allowed functions are: allfunctions.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$orderby",
+            "in": "query",
+            "description": "Specifies the order in which items are returned. The maximum number of expressions is 5.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "description": "Limits the number of items returned from a collection.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$skip",
+            "in": "query",
+            "description": "Excludes the specified number of items of the queried collection from the result.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$count",
+            "in": "query",
+            "description": "Indicates whether the total count of items within a collection are returned in the result.",
+            "schema": {
+              "type": "boolean",
+              "default": "False"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Territory" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Shippers": {
+      "get": {
+        "tags": [
+          "Shippers"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "description": "Restricts the set of items returned. The maximum number of expressions is 100. The allowed functions are: allfunctions.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$orderby",
+            "in": "query",
+            "description": "Specifies the order in which items are returned. The maximum number of expressions is 5.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "description": "Limits the number of items returned from a collection.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$skip",
+            "in": "query",
+            "description": "Excludes the specified number of items of the queried collection from the result.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$count",
+            "in": "query",
+            "description": "Indicates whether the total count of items within a collection are returned in the result.",
+            "schema": {
+              "type": "boolean",
+              "default": "False"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Shipper" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Shippers({key})": {
+      "get": {
+        "tags": [
+          "Shippers"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/User" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Shippers({key})/Orders": {
+      "get": {
+        "tags": [
+          "Shippers"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "description": "Restricts the set of items returned. The maximum number of expressions is 100. The allowed functions are: allfunctions.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$orderby",
+            "in": "query",
+            "description": "Specifies the order in which items are returned. The maximum number of expressions is 5.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "description": "Limits the number of items returned from a collection.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$skip",
+            "in": "query",
+            "description": "Excludes the specified number of items of the queried collection from the result.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$count",
+            "in": "query",
+            "description": "Indicates whether the total count of items within a collection are returned in the result.",
+            "schema": {
+              "type": "boolean",
+              "default": "False"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Order" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Suppliers": {
+      "get": {
+        "tags": [
+          "Suppliers"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "description": "Restricts the set of items returned. The maximum number of expressions is 100. The allowed functions are: allfunctions.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$orderby",
+            "in": "query",
+            "description": "Specifies the order in which items are returned. The maximum number of expressions is 5.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "description": "Limits the number of items returned from a collection.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$skip",
+            "in": "query",
+            "description": "Excludes the specified number of items of the queried collection from the result.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$count",
+            "in": "query",
+            "description": "Indicates whether the total count of items within a collection are returned in the result.",
+            "schema": {
+              "type": "boolean",
+              "default": "False"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Supplier" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Suppliers({key})": {
+      "get": {
+        "tags": [
+          "Suppliers"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Supplier" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Suppliers({key})/Products": {
+      "get": {
+        "tags": [
+          "Suppliers"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "description": "Restricts the set of items returned. The maximum number of expressions is 100. The allowed functions are: allfunctions.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$orderby",
+            "in": "query",
+            "description": "Specifies the order in which items are returned. The maximum number of expressions is 5.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "description": "Limits the number of items returned from a collection.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$skip",
+            "in": "query",
+            "description": "Excludes the specified number of items of the queried collection from the result.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$count",
+            "in": "query",
+            "description": "Indicates whether the total count of items within a collection are returned in the result.",
+            "schema": {
+              "type": "boolean",
+              "default": "False"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Product" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Territories": {
+      "get": {
+        "tags": [
+          "Territories"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "description": "Restricts the set of items returned. The maximum number of expressions is 100. The allowed functions are: allfunctions.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$orderby",
+            "in": "query",
+            "description": "Specifies the order in which items are returned. The maximum number of expressions is 5.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "description": "Limits the number of items returned from a collection.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$skip",
+            "in": "query",
+            "description": "Excludes the specified number of items of the queried collection from the result.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$count",
+            "in": "query",
+            "description": "Indicates whether the total count of items within a collection are returned in the result.",
+            "schema": {
+              "type": "boolean",
+              "default": "False"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Territory" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Territories('{key}')": {
+      "get": {
+        "tags": [
+          "Territories"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Territory" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Territories('{key}')/EmployeeTerritories": {
+      "get": {
+        "tags": [
+          "Territories"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "description": "Restricts the set of items returned. The maximum number of expressions is 100. The allowed functions are: allfunctions.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$orderby",
+            "in": "query",
+            "description": "Specifies the order in which items are returned. The maximum number of expressions is 5.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "description": "Limits the number of items returned from a collection.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$skip",
+            "in": "query",
+            "description": "Excludes the specified number of items of the queried collection from the result.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "$count",
+            "in": "query",
+            "description": "Indicates whether the total count of items within a collection are returned in the result.",
+            "schema": {
+              "type": "boolean",
+              "default": "False"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/User" } } } }
+          }
+        }
+      }
+    },
+    "/Northwind.svc/Territories('{key}')/Region": {
+      "get": {
+        "tags": [
+          "Territories"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Limits the properties returned in the result.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Region" } } } }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Category": {
+        "type": "object",
+        "properties": {
+          "categoryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "categoryName": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "CategoryDetail": {
+        "type": "object",
+        "properties": {
+          "categoryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "categoryName": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "picture": {
+            "type": "string",
+            "nullable": true
+          },
+          "productNames": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        }
+      },
+      "Product": {
+        "type": "object",
+        "properties": {
+          "productId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "productName": {
+            "type": "string",
+            "nullable": true
+          },
+          "supplierId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "categoryId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "quantityPerUnit": {
+            "type": "string",
+            "nullable": true
+          },
+          "unitPrice": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "unitsInStock": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "unitsOnOrder": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "reorderLevel": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "discontinued": {
+            "type": "boolean"
+          }
+        }
+      },
+      "Customer": {
+        "type": "object",
+        "properties": {
+          "customerId": {
+            "type": "string",
+            "nullable": true
+          },
+          "companyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "contactName": {
+            "type": "string",
+            "nullable": true
+          },
+          "contactTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "region": {
+            "type": "string",
+            "nullable": true
+          },
+          "postalCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "country": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "fax": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "Order": {
+        "type": "object",
+        "properties": {
+          "orderId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "customerId": {
+            "type": "string",
+            "nullable": true
+          },
+          "employeeId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "orderDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "requiredDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "shippedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "shipVia": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "freight": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "shipName": {
+            "type": "string",
+            "nullable": true
+          },
+          "shipAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "shipCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "shipRegion": {
+            "type": "string",
+            "nullable": true
+          },
+          "shipPostalCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "shipCountry": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "Employee": {
+        "type": "object",
+        "properties": {
+          "employeeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "titleOfCourtesy": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "hireDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "region": {
+            "type": "string",
+            "nullable": true
+          },
+          "postalCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "country": {
+            "type": "string",
+            "nullable": true
+          },
+          "homePhone": {
+            "type": "string",
+            "nullable": true
+          },
+          "extension": {
+            "type": "string",
+            "nullable": true
+          },
+          "photo": {
+            "type": "string",
+            "nullable": true
+          },
+          "notes": {
+            "type": "string",
+            "nullable": true
+          },
+          "reportsTo": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "photoPath": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "Territory": {
+        "type": "object",
+        "properties": {
+          "territoryId": {
+            "type": "string",
+            "nullable": true
+          },
+          "territoryDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "regionId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "OrderDetail": {
+        "type": "object",
+        "properties": {
+          "orderId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "productId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "unitPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "discount": {
+            "type": "number",
+            "format": "float"
+          }
+        }
+      },
+      "Shipper": {
+        "type": "object",
+        "properties": {
+          "shipperId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "companyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "Supplier": {
+        "type": "object",
+        "properties": {
+          "supplierId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "companyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "contactName": {
+            "type": "string",
+            "nullable": true
+          },
+          "contactTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "region": {
+            "type": "string",
+            "nullable": true
+          },
+          "postalCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "country": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "homePage": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "Region": {
+        "type": "object",
+        "properties": {
+          "regionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "regionDescription": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      }
+    }
+  }
+}

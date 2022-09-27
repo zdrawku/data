@@ -1,0 +1,19 @@
+{
+	"list": [
+		{
+			"id": 1,
+			"name": "BG"
+		}, {
+			"id": 2,
+			"name": "US"
+		}
+	],
+	"totalRecords": 2,
+	"totalPages": 1,
+	"startPage": 1,
+	"endPage": 1,
+	"object": {
+		"prop": 12,
+		"prop2": "hello"
+	}
+}

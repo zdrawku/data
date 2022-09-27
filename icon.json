@@ -1,0 +1,8024 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "icon": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "orderStatus": {
+          "$ref": "#/definitions/orderStatus"
+        },
+        "creditReport": {
+          "$ref": "#/definitions/creditReport"
+        },
+        "notification": {
+          "$ref": "#/definitions/notification"
+        },
+        "version": {
+          "type": "string",
+          "description": ""
+        },
+        "creditScoring": {
+        	"$ref": "#/definitions/creditScoring"
+        }
+      },
+      "required": [
+        "version"
+      ],
+      "additionalProperties": false
+    },
+    "orderStatus": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "intercreditOrderNumber": {
+          "$ref": "#/definitions/intercreditOrderNumber"
+        },
+        "provider": {
+          "$ref": "#/definitions/provider"
+        },
+        "customer": {
+          "$ref": "#/definitions/customer"
+        },
+        "customersReference": {
+          "$ref": "#/definitions/customersReference"
+        },
+        "purchaseOrderNumber": {
+          "$ref": "#/definitions/purchaseOrderNumber"
+        },
+        "language": {
+          "$ref": "#/definitions/language"
+        },
+        "product": {
+          "$ref": "#/definitions/product"
+        },
+        "reportMimeType": {
+          "$ref": "#/definitions/reportMimeType"
+        },
+        "balanceSheetLayout": {
+          "$ref": "#/definitions/balanceSheetLayout"
+        },
+        "timestamp": {
+          "$ref": "#/definitions/timestamp"
+        },
+        "status": {
+          "$ref": "#/definitions/status"
+        },
+        "requiredBy": {
+          "$ref": "#/definitions/requiredBy"
+        },
+        "givenCompanyName": {
+          "$ref": "#/definitions/givenCompanyName"
+        },
+        "requestedCompanyInformation": {
+          "$ref": "#/definitions/requestedCompanyInformation"
+        },
+        "question": {
+          "$ref": "#/definitions/question"
+        },
+        "answer": {
+          "$ref": "#/definitions/answer"
+        },
+        "negative": {
+          "$ref": "#/definitions/negative"
+        }
+      },
+      "required": [
+        "intercreditOrderNumber",
+        "provider",
+        "customer",
+        "customersReference",
+        "purchaseOrderNumber",
+        "language",
+        "product",
+        "reportMimeType",
+        "timestamp",
+        "status",
+        "requiredBy",
+        "givenCompanyName",
+        "question",
+        "answer"
+      ],
+      "additionalProperties": false
+    },
+    "intercreditOrderNumber": {
+      "type": "string",
+      "description": ""
+    },
+    "provider": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "providerId": {
+          "$ref": "#/definitions/providerId"
+        },
+        "name": {
+          "$ref": "#/definitions/name"
+        },
+        "senderId": {
+          "$ref": "#/definitions/senderId"
+        },
+        "city": {
+          "$ref": "#/definitions/city"
+        },
+        "country": {
+          "$ref": "#/definitions/country"
+        },
+        "street": {
+          "$ref": "#/definitions/street"
+        },
+        "houseNumber": {
+          "$ref": "#/definitions/houseNumber"
+        },
+        "zipcode": {
+          "$ref": "#/definitions/zipcode"
+        }
+      },
+      "required": [
+        "providerId",
+        "name",
+        "senderId",
+        "city",
+        "country",
+        "street",
+        "houseNumber",
+        "zipcode"
+      ],
+      "additionalProperties": false
+    },
+    "providerId": {
+      "type": "string",
+      "description": ""
+    },
+    "name": {
+      "type": "string",
+      "description": ""
+    },
+    "customerId": {
+      "type": "string",
+      "description": ""
+    },
+    "customername": {
+      "type": "string",
+      "description": ""
+    },
+    "customersReference": {
+      "type": "string",
+      "description": ""
+    },
+    "purchaseOrderNumber": {
+      "type": "string",
+      "description": ""
+    },
+    "language": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "balanceSheetLayout": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "timestamp": {
+      "type": "string",
+      "description": ""
+    },
+    "status": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "requiredBy": {
+      "type": "string",
+      "description": ""
+    },
+    "price": {
+      "type": "string",
+      "description": ""
+    },
+    "currency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "givenCompanyName": {
+      "type": "string",
+      "description": ""
+    },
+    "question": {
+      "type": "string",
+      "description": ""
+    },
+    "answer": {
+      "type": "string",
+      "description": ""
+    },
+    "creditReport": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "company": {
+          "$ref": "#/definitions/company"
+        },
+        "shareholders": {
+          "$ref": "#/definitions/shareholders"
+        },
+        "formerShareholders": {
+          "$ref": "#/definitions/formerShareholders"
+        },
+        "ultimateBeneficialOwners": {
+          "$ref": "#/definitions/ultimateBeneficialOwners"
+        },
+        "auditors": {
+          "$ref": "#/definitions/auditors"
+        },
+        "management": {
+          "$ref": "#/definitions/management"
+        },
+        "personFunctionsInOtherCompanies": {
+          "$ref": "#/definitions/personFunctionsInOtherCompanies"
+        },
+        "authority": {
+          "$ref": "#/definitions/authority"
+        },
+        "activities": {
+          "$ref": "#/definitions/activities"
+        },
+        "imports": {
+          "$ref": "#/definitions/imports"
+        },
+        "exports": {
+          "$ref": "#/definitions/exports"
+        },
+        "keyData": {
+          "$ref": "#/definitions/keyData"
+        },
+        "calculatedKeyDataInfo": {
+          "$ref": "#/definitions/calculatedKeyDataInfo"
+        },
+        "balanceSheet": {
+          "$ref": "#/definitions/balanceSheet"
+        },
+        "consolidatedBalanceSheet": {
+          "$ref": "#/definitions/consolidatedBalanceSheet"
+        },
+        "additionalBalanceSheets": {
+          "$ref": "#/definitions/additionalBalanceSheets"
+        },
+        "balanceSheetPublications": {
+          "$ref": "#/definitions/balanceSheetPublications"
+        },
+        "shareholderFinancials": {
+          "$ref": "#/definitions/shareholderFinancials"
+        },
+        "relatedcompaniesFinancials": {
+          "$ref": "#/definitions/relatedcompaniesFinancials"
+        },
+        "ratios": {
+          "$ref": "#/definitions/ratios"
+        },
+        "branchRatios": {
+          "$ref": "#/definitions/branchRatios"
+        },
+        "workforce": {
+          "$ref": "#/definitions/workforce"
+        },
+        "tradeHistory": {
+          "$ref": "#/definitions/tradeHistory"
+        },
+        "inventory": {
+          "$ref": "#/definitions/inventory"
+        },
+        "turnover": {
+          "$ref": "#/definitions/turnover"
+        },
+        "liabilities": {
+          "$ref": "#/definitions/liabilities"
+        },
+        "claimsReceiveable": {
+          "$ref": "#/definitions/claimsReceiveable"
+        },
+        "vehicles": {
+          "$ref": "#/definitions/vehicles"
+        },
+        "motorVehicles": {
+          "$ref": "#/definitions/motorVehicles"
+        },
+        "realEstates": {
+          "$ref": "#/definitions/realEstates"
+        },
+        "linkedCompanies": {
+          "$ref": "#/definitions/linkedCompanies"
+        },
+        "functionaryCompanies": {
+          "$ref": "#/definitions/functionaryCompanies"
+        },
+        "bankConnections": {
+          "$ref": "#/definitions/bankConnections"
+        },
+        "bankConfirmations": {
+          "$ref": "#/definitions/bankConfirmations"
+        },
+        "shareCapital": {
+          "$ref": "#/definitions/shareCapital"
+        },
+        "dates": {
+          "$ref": "#/definitions/dates"
+        },
+        "additionalInformation": {
+          "$ref": "#/definitions/additionalInformation"
+        },
+        "additionalComments": {
+          "$ref": "#/definitions/additionalComments"
+        },
+        "businessTrends": {
+          "$ref": "#/definitions/businessTrends"
+        },
+        "companyDevelopment": {
+          "$ref": "#/definitions/companyDevelopment"
+        },
+        "research": {
+          "$ref": "#/definitions/research"
+        },
+        "payments": {
+          "$ref": "#/definitions/payments"
+        },
+        "paymentIndex": {
+          "$ref": "#/definitions/paymentIndex"
+        },
+        "paymentIncidentAmounts": {
+          "$ref": "#/definitions/paymentIncidentAmounts"
+        },
+        "paymentIncidentCases": {
+          "$ref": "#/definitions/paymentIncidentCases"
+        },
+        "paymentReferences": {
+          "$ref": "#/definitions/paymentReferences"
+        },
+        "paymentMoralityIndex": {
+          "$ref": "#/definitions/paymentMoralityIndex"
+        },
+        "paymentMoralityIndexHistory": {
+          "$ref": "#/definitions/paymentMoralityIndexHistory"
+        },
+        "daysPayableOutstanding": {
+          "$ref": "#/definitions/daysPayableOutstanding"
+        },
+        "assessment": {
+          "$ref": "#/definitions/assessment"
+        },
+        "litigations": {
+          "$ref": "#/definitions/litigations"
+        },
+        "litigationSummaries": {
+          "$ref": "#/definitions/litigationSummaries"
+        },
+        "natureOfBusiness": {
+          "$ref": "#/definitions/natureOfBusiness"
+        },
+        "charges": {
+          "$ref": "#/definitions/charges"
+        },
+        "creditRequested": {
+          "$ref": "#/definitions/creditRequested"
+        },
+        "statusOfCompany": {
+          "$ref": "#/definitions/statusOfCompany"
+        },
+        "profitability": {
+          "$ref": "#/definitions/profitability"
+        },
+        "financialSituation": {
+          "$ref": "#/definitions/financialSituation"
+        },
+        "contactInformations": {
+          "$ref": "#/definitions/contactInformations"
+        },
+        "insolvency": {
+          "$ref": "#/definitions/insolvency"
+        },
+        "additionalInsolvencies": {
+          "$ref": "#/definitions/additionalInsolvencies"
+        },
+        "ratingTexts": {
+          "$ref": "#/definitions/ratingTexts"
+        },
+        "debtCollection": {
+          "$ref": "#/definitions/debtCollection"
+        },
+        "maximumCredit": {
+          "$ref": "#/definitions/maximumCredit"
+        },
+        "maximumCreditHistory": {
+          "$ref": "#/definitions/maximumCreditHistory"
+        },
+        "paymentIndexHistory": {
+          "$ref": "#/definitions/paymentIndexHistory"
+        },
+        "customerSpecificMaxCredits": {
+          "$ref": "#/definitions/customerSpecificMaxCredits"
+        },
+        "cceatRating": {
+          "$ref": "#/definitions/cceatRating"
+        },
+        "historicalcceATRatings": {
+          "$ref": "#/definitions/historicalcceATRatings"
+        },
+        "financialSources": {
+          "$ref": "#/definitions/financialSources"
+        },
+        "audits": {
+          "$ref": "#/definitions/audits"
+        },
+        "statusList": {
+          "$ref": "#/definitions/statusList"
+        },
+        "companyHistory": {
+          "$ref": "#/definitions/companyHistory"
+        },
+        "majorSuppliers": {
+          "$ref": "#/definitions/majorSuppliers"
+        },
+        "majorCustomers": {
+          "$ref": "#/definitions/majorCustomers"
+        },
+        "eurogateRiskClass": {
+          "$ref": "#/definitions/eurogateRiskClass"
+        },
+        "financials": {
+          "$ref": "#/definitions/financials"
+        },
+        "executions": {
+          "$ref": "#/definitions/executions"
+        },
+        "negativeInformation": {
+          "$ref": "#/definitions/negativeInformation"
+        },
+        "countryIndicators": {
+          "$ref": "#/definitions/countryIndicators"
+        },
+        "externalDebts": {
+          "$ref": "#/definitions/externalDebts"
+        },
+        "familyTree": {
+          "$ref": "#/definitions/familyTree"
+        },
+        "dclInsurance": {
+          "$ref": "#/definitions/dclInsurance"
+        },
+        "additionalTextInformations": {
+          "$ref": "#/definitions/additionalTextInformations"
+        },
+        "sectorScore": {
+          "$ref": "#/definitions/sectorScore"
+        },
+        "scoringElements": {
+          "$ref": "#/definitions/scoringElements"
+        }
+      },
+      "additionalProperties": false
+    },
+    "company": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "copyright": {
+          "$ref": "#/definitions/copyright"
+        },
+        "intercreditNumber": {
+          "$ref": "#/definitions/intercreditNumber"
+        },
+        "nationalId": {
+          "$ref": "#/definitions/nationalId"
+        },
+        "status": {
+          "$ref": "#/definitions/status"
+        },
+        "companyName": {
+          "$ref": "#/definitions/companyName"
+        },
+        "sortName": {
+          "$ref": "#/definitions/sortName"
+        },
+        "internationalName": {
+          "$ref": "#/definitions/internationalName"
+        },
+        "easyNumber": {
+          "$ref": "#/definitions/easyNumber"
+        },
+        "shortName": {
+          "$ref": "#/definitions/shortName"
+        },
+        "legalForm": {
+          "$ref": "#/definitions/legalForm"
+        },
+        "legalFormSubType": {
+          "$ref": "#/definitions/legalFormSubType"
+        },
+        "registration": {
+          "$ref": "#/definitions/registration"
+        },
+        "companyComment": {
+          "$ref": "#/definitions/companyComment"
+        },
+        "history": {
+          "$ref": "#/definitions/history"
+        },
+        "taxNumber": {
+          "$ref": "#/definitions/taxNumber"
+        },
+        "statisticalNumber": {
+          "$ref": "#/definitions/statisticalNumber"
+        },
+        "vatNumber": {
+          "$ref": "#/definitions/vatNumber"
+        },
+        "validityDate": {
+          "$ref": "#/definitions/validityDate"
+        },
+        "lastMajorUpdate": {
+          "$ref": "#/definitions/lastMajorUpdate"
+        },
+        "established": {
+          "$ref": "#/definitions/established"
+        },
+        "capital": {
+          "$ref": "#/definitions/capital"
+        },
+        "nationalCurrency": {
+          "$ref": "#/definitions/nationalCurrency"
+        },
+        "annualReturnDate": {
+          "$ref": "#/definitions/annualReturnDate"
+        },
+        "annualReturnFiledOn": {
+          "$ref": "#/definitions/annualReturnFiledOn"
+        },
+        "aliases": {
+          "$ref": "#/definitions/aliases"
+        },
+        "addresses": {
+          "$ref": "#/definitions/addresses"
+        },
+        "primaryNationalIdentifier": {
+          "$ref": "#/definitions/primaryNationalIdentifier"
+        }
+      },
+      "required": [
+        "copyright",
+        "intercreditNumber",
+        "nationalId",
+        "status",
+        "companyName",
+        "sortName",
+        "internationalName",
+        "legalForm",
+        "registration",
+        "companyComment",
+        "history",
+        "taxNumber",
+        "statisticalNumber",
+        "vatNumber",
+        "capital",
+        "nationalCurrency",
+        "aliases",
+        "addresses"
+      ],
+      "additionalProperties": false
+    },
+    "copyright": {
+      "type": "string",
+      "description": ""
+    },
+    "intercreditNumber": {
+      "type": "string",
+      "description": ""
+    },
+    "nationalId": {
+      "type": "string",
+      "description": ""
+    },
+    "companyName": {
+      "type": "string",
+      "description": ""
+    },
+    "sortName": {
+      "type": "string",
+      "description": ""
+    },
+    "internationalName": {
+      "type": "string",
+      "description": ""
+    },
+    "easyNumber": {
+      "type": "string",
+      "description": ""
+    },
+    "shortName": {
+      "type": "string",
+      "description": ""
+    },
+    "legalForm": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "legalFormSubType": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "registration": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "number": {
+          "$ref": "#/definitions/number"
+        },
+        "city": {
+          "$ref": "#/definitions/city"
+        },
+        "country": {
+          "$ref": "#/definitions/country"
+        },
+        "countryRegion": {
+          "$ref": "#/definitions/countryRegion"
+        },
+        "date": {
+          "$ref": "#/definitions/date"
+        }
+      },
+      "additionalProperties": false
+    },
+    "number": {
+      "type": "string",
+      "description": ""
+    },
+    "city": {
+      "type": "string",
+      "description": ""
+    },
+    "country": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "countryRegion": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "countryList": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "date": {
+      "type": "number",
+      "description": ""
+    },
+    "threeDigitScore": {
+      "type": "number",
+      "description": ""
+    },
+    "comment": {
+      "type": "string",
+      "description": ""
+    },
+    "history": {
+      "type": "string",
+      "description": ""
+    },
+    "taxNumber": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "value": {
+          "$ref": "#/definitions/value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "type": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "value": {
+      "type": "string",
+      "description": ""
+    },
+    "subType": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "vatNumber": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "value": {
+          "$ref": "#/definitions/value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "validityDate": {
+      "type": "number",
+      "description": ""
+    },
+    "lastMajorUpdate": {
+      "type": "number",
+      "description": ""
+    },
+    "established": {
+      "type": "number",
+      "description": ""
+    },
+    "capital": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "indicator": {
+          "$ref": "#/definitions/indicator"
+        }
+      },
+      "additionalProperties": false
+    },
+    "fromAmount": {
+      "oneOf": [
+      	{
+      		"type": "number",
+  			"description": ""
+      	},
+      	{
+      		"type": "null",
+  			"description": ""
+      	}
+      ]
+    },
+    "toAmount": {
+      "type": "number",
+      "description": ""
+    },
+    "dimension": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "measure": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "labelType": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "outlineNumber": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "partialBalanceSheet": {
+      "type": "string",
+      "description": ""
+    },
+    "aliases": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/alias"
+      },
+      "additionalItems": false
+    },
+    "alias": {
+      "type": "object",
+      "description": "",
+      "properties": {
+      	"alias": {
+      		"type": "string",
+      		"description": ""
+      	}
+      },
+      "additionalProperties": false
+    },
+    "annualReturnDate": {
+      "type": "number",
+      "description": ""
+    },
+    "annualReturnFiledOn": {
+      "type": "number",
+      "description": ""
+    },
+    "address": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "addressType": {
+          "$ref": "#/definitions/addressType"
+        },
+        "runningNumber": {
+          "$ref": "#/definitions/runningNumber"
+        },
+        "name": {
+          "$ref": "#/definitions/name"
+        },
+        "street": {
+          "$ref": "#/definitions/street"
+        },
+        "houseNumber": {
+          "$ref": "#/definitions/houseNumber"
+        },
+        "additionalAddressLine": {
+          "$ref": "#/definitions/additionalAddressLine"
+        },
+        "zipcode": {
+          "$ref": "#/definitions/zipcode"
+        },
+        "city": {
+          "$ref": "#/definitions/city"
+        },
+        "country": {
+          "$ref": "#/definitions/country"
+        },
+        "countryRegion": {
+          "$ref": "#/definitions/countryRegion"
+        },
+        "county": {
+          "$ref": "#/definitions/county"
+        },
+        "community": {
+          "$ref": "#/definitions/community"
+        },
+        "post": {
+          "$ref": "#/definitions/post"
+        },
+        "telephone": {
+          "$ref": "#/definitions/telephone"
+        },
+        "telephone2": {
+          "$ref": "#/definitions/telephone"
+        },
+        "telephone3": {
+          "$ref": "#/definitions/telephone"
+        },
+        "telephone4": {
+          "$ref": "#/definitions/telephone"
+        },
+        "telephone5": {
+          "$ref": "#/definitions/telephone"
+        },
+        "fax": {
+          "$ref": "#/definitions/fax"
+        },
+        "email": {
+          "$ref": "#/definitions/email"
+        },
+        "internet": {
+          "$ref": "#/definitions/internet"
+        }
+      },
+      "required": [
+        "addressType",
+        "runningNumber",
+        "street",
+        "houseNumber",
+        "zipcode",
+        "city",
+        "country",
+        "telephone",
+        "fax",
+        "email",
+        "internet"
+      ]
+    },
+    "addressType": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "runningNumber": {
+      "type": "string",
+      "description": ""
+    },
+    "street": {
+      "type": "string",
+      "description": ""
+    },
+    "houseNumber": {
+      "type": "string",
+      "description": ""
+    },
+    "additionalAddressLine": {
+      "type": "string",
+      "description": ""
+    },
+    "county": {
+      "type": "string",
+      "description": ""
+    },
+    "community": {
+      "type": "string",
+      "description": ""
+    },
+    "post": {
+      "type": "string",
+      "description": ""
+    },
+    "zipcode": {
+      "type": "string",
+      "description": ""
+    },
+    "telephone": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "international": {
+          "$ref": "#/definitions/international"
+        },
+        "area": {
+          "$ref": "#/definitions/area"
+        },
+        "number": {
+          "$ref": "#/definitions/number"
+        }
+      },
+      "required": [
+        "international",
+        "area",
+        "number"
+      ],
+      "additionalProperties": false
+    },
+    "area": {
+      "type": "string",
+      "description": ""
+    },
+    "fax": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "international": {
+          "$ref": "#/definitions/international"
+        },
+        "area": {
+          "$ref": "#/definitions/area"
+        },
+        "number": {
+          "$ref": "#/definitions/number"
+        }
+      },
+      "required": [
+        "international",
+        "area",
+        "number"
+      ],
+      "additionalProperties": false
+    },
+    "shareholderFinancials": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/shareholder"
+      },
+      "additionalItems": false
+    },
+    "shareholders": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/shareholder"
+      },
+      "additionalItems": false
+    },
+    "relatedcompaniesFinancials": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/relatedcompanyFinancials"
+      },
+      "additionalItems": false
+    },   
+    "formerShareholders": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/shareholder"
+      },
+      "additionalItems": false
+    },
+    "relatedcompanyFinancials": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "intercreditNumber": {
+          "$ref": "#/definitions/intercreditNumber"
+        },
+        "companyName": {
+          "$ref": "#/definitions/companyName"
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        },
+        "balanceSheet": {
+          "$ref": "#/definitions/balanceSheet"
+        }
+      },
+      "required": [
+        "intercreditNumber",
+        "companyName",
+        "balanceSheet"
+      ],
+      "additionalProperties": false
+    },
+    "shareholder": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "subType": {
+          "$ref": "#/definitions/subType"
+        },
+        "name": {
+          "$ref": "#/definitions/name"
+        },
+        "address": {
+          "$ref": "#/definitions/address"
+        },
+        "activeSince": {
+          "$ref": "#/definitions/activeSince"
+        },
+        "activeUntil": {
+          "$ref": "#/definitions/activeUntil"
+        },
+        "equityAmount": {
+          "$ref": "#/definitions/equityAmount"
+        },
+        "equityCurrency": {
+          "$ref": "#/definitions/equityCurrency"
+        },
+        "equityDimension": {
+          "$ref": "#/definitions/equityDimension"
+        },
+        "IsPerson": {
+          "$ref": "#/definitions/IsPerson"
+        },
+        "intercreditNumber": {
+          "$ref": "#/definitions/intercreditNumber"
+        },
+        "registrationCountry": {
+          "$ref": "#/definitions/registrationCountry"
+        },
+        "registrationPlace": {
+          "$ref": "#/definitions/registrationPlace"
+        },
+        "registrationDate": {
+          "$ref": "#/definitions/registrationDate"
+        },
+        "registrationNumber": {
+          "$ref": "#/definitions/registrationNumber"
+        },
+        "shares1Number": {
+          "$ref": "#/definitions/shares1Number"
+        },
+        "shares1Class": {
+          "$ref": "#/definitions/shares1Class"
+        },
+        "shares2Number": {
+          "$ref": "#/definitions/shares2Number"
+        },
+        "shares2Class": {
+          "$ref": "#/definitions/shares2Class"
+        },
+        "shares3Number": {
+          "$ref": "#/definitions/shares3Number"
+        },
+        "shares3Class": {
+          "$ref": "#/definitions/shares3Class"
+        },
+        "companyStatus": {
+          "$ref": "#/definitions/companyStatus"
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        },
+        "balanceSheet": {
+          "$ref": "#/definitions/balanceSheet"
+        }
+      },
+      "required": [
+        "type",
+        "name",
+        "equityCurrency",
+        "equityDimension"
+      ],
+      "additionalProperties": false
+    },
+    "IsPerson": {
+      "type": "boolean",
+      "description": ""
+    },
+    "activeSince": {
+      "type": "number",
+      "description": ""
+    },
+    "activeUntil": {
+      "type": "number",
+      "description": ""
+    },
+    "equityAmount": {
+      "type": "number",
+      "description": ""
+    },
+    "equityCurrency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "equityDimension": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "registrationPlace": {
+      "type": "string",
+      "description": ""
+    },
+    "registrationDate": {
+      "type": "number",
+      "description": ""
+    },
+    "registrationNumber": {
+      "type": "string",
+      "description": ""
+    },
+    "shares1Number": {
+      "type": "number",
+      "description": ""
+    },
+    "shares1Class": {
+      "type": "string",
+      "description": ""
+    },
+    "shares2Number": {
+      "type": "number",
+      "description": ""
+    },
+    "shares2Class": {
+      "type": "string",
+      "description": ""
+    },
+    "shares3Number": {
+      "type": "number",
+      "description": ""
+    },
+    "shares3Class": {
+      "type": "string",
+      "description": ""
+    },
+    "ultimateBeneficialOwners": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/manager"
+      },
+      "additionalItems": false
+    },
+    "auditors": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/manager"
+      },
+      "additionalItems": false
+    },
+    "management": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "managers": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/manager"
+          }
+        },
+        "comments": {
+          "$ref": "#/definitions/comments"
+        }
+      },
+      "additionalProperties": false
+    },
+    "manager": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "subType": {
+          "$ref": "#/definitions/subType"
+        },
+        "name": {
+          "$ref": "#/definitions/name"
+        },
+        "address": {
+          "$ref": "#/definitions/address"
+        },
+        "activeSince": {
+          "$ref": "#/definitions/activeSince"
+        },
+        "activeUntil": {
+          "$ref": "#/definitions/activeUntil"
+        },
+        "equityAmount": {
+          "$ref": "#/definitions/equityAmount"
+        },
+        "equityCurrency": {
+          "$ref": "#/definitions/equityCurrency"
+        },
+        "equityDimension": {
+          "$ref": "#/definitions/equityDimension"
+        },
+        "IsPerson": {
+          "$ref": "#/definitions/IsPerson"
+        },
+        "intercreditNumber": {
+          "$ref": "#/definitions/intercreditNumber"
+        },
+        "registrationCountry": {
+          "$ref": "#/definitions/registrationCountry"
+        },
+        "registrationPlace": {
+          "$ref": "#/definitions/registrationPlace"
+        },
+        "registrationDate": {
+          "$ref": "#/definitions/registrationDate"
+        },
+        "registrationNumber": {
+          "$ref": "#/definitions/registrationNumber"
+        },
+        "shares1Number": {
+          "$ref": "#/definitions/shares1Number"
+        },
+        "shares1Class": {
+          "$ref": "#/definitions/shares1Class"
+        },
+        "shares2Number": {
+          "$ref": "#/definitions/shares2Number"
+        },
+        "shares2Class": {
+          "$ref": "#/definitions/shares2Class"
+        },
+        "shares3Number": {
+          "$ref": "#/definitions/shares3Number"
+        },
+        "shares3Class": {
+          "$ref": "#/definitions/shares3Class"
+        },
+        "companyStatus": {
+          "$ref": "#/definitions/companyStatus"
+        },
+        "easyNumber": {
+          "$ref": "#/definitions/easyNumber"
+        },
+        "personNumber": {
+          "$ref": "#/definitions/personNumber"
+        },
+        "pid": {
+          "$ref": "#/definitions/pid"
+        },
+        "country": {
+          "$ref": "#/definitions/country"
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "required": [
+        "type",
+        "name",
+        "equityCurrency",
+        "equityDimension"
+      ],
+      "additionalProperties": false
+    },
+    "personNumber": {
+      "type": "string",
+      "description": ""
+    },
+    "pid": {
+      "type": "string",
+      "description": ""
+    },
+    "functionaryCompanies": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/functionaryCompany"
+      },
+      "additionalItems": false
+    },
+    "functionaryCompany": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "subType": {
+          "$ref": "#/definitions/subType"
+        },
+        "name": {
+          "$ref": "#/definitions/name"
+        },
+        "address": {
+          "$ref": "#/definitions/address"
+        },
+        "activeSince": {
+          "$ref": "#/definitions/activeSince"
+        },
+        "activeUntil": {
+          "$ref": "#/definitions/activeUntil"
+        },
+        "equityAmount": {
+          "$ref": "#/definitions/equityAmount"
+        },
+        "equityCurrency": {
+          "$ref": "#/definitions/equityCurrency"
+        },
+        "equityDimension": {
+          "$ref": "#/definitions/equityDimension"
+        },
+        "intercreditNumber": {
+          "$ref": "#/definitions/intercreditNumber"
+        },
+        "registrationCountry": {
+          "$ref": "#/definitions/registrationCountry"
+        },
+        "registrationPlace": {
+          "$ref": "#/definitions/registrationPlace"
+        },
+        "registrationDate": {
+          "$ref": "#/definitions/registrationDate"
+        },
+        "registrationNumber": {
+          "$ref": "#/definitions/registrationNumber"
+        },
+        "companyStatus": {
+          "$ref": "#/definitions/companyStatus"
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "required": [
+        "type",
+        "name",
+        "equityCurrency",
+        "equityDimension"
+      ],
+      "additionalProperties": false
+    },
+    "personFunctionsInOtherCompanies": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/personFunctions"
+      },
+      "additionalItems": false
+    },
+    "personFunctions": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "name": {
+          "$ref": "#/definitions/name"
+        },
+        "functions": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/function"
+          },
+          "additionalItems": false
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "function": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "position": {
+          "$ref": "#/definitions/position"
+        },
+        "functionCompany": {
+          "$ref": "#/definitions/functionCompany"
+        },
+        "country": {
+          "$ref": "#/definitions/country"
+        }
+      },
+      "additionalProperties": false
+    },
+    "position": {
+      "type": "string",
+      "description": ""
+    },
+    "functionCompany": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "nationalId": {
+          "type": "string",
+          "description": ""
+        },
+        "vatNumber": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "comments": {
+      "type": "array",
+      "description": "",
+      "items": [
+      	{
+      		"type": "object",
+      		"properties": {
+      			"comment": {
+      				"$ref": "#/definitions/comment"
+      			}
+      		},
+      		"additionalProperties": false
+      	}
+      ]
+    },
+    "activities": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "activitiesList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/activity"
+          }
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "activity": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "priority": {
+          "$ref": "#/definitions/priority"
+        },
+        "naceCode": {
+          "$ref": "#/definitions/naceCode"
+        },
+        "naceText": {
+          "$ref": "#/definitions/naceText"
+        },
+        "localActivityCode": {
+          "$ref": "#/definitions/localActivityCode"
+        },
+        "localActivityText": {
+          "$ref": "#/definitions/localActivityText"
+        }
+      },
+      "additionalProperties": false
+    },
+    "localActivityCode": {
+      "type": "string",
+      "description": ""
+    },
+    "localActivityText": {
+      "type": "string",
+      "description": ""
+    },
+    "priority": {
+      "type": "number",
+      "description": ""
+    },
+    "naceCode": {
+      "type": "string",
+      "description": ""
+    },
+    "naceText": {
+      "type": "string",
+      "description": ""
+    },
+    "imports": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "generalPaymentTerms1": {
+          "$ref": "#/definitions/generalPaymentTerms1"
+        },
+        "generalPaymentDays1": {
+          "$ref": "#/definitions/generalPaymentDays1"
+        },
+        "generalPaymentTerms2": {
+          "$ref": "#/definitions/generalPaymentTerms2"
+        },
+        "generalPaymentDays2": {
+          "$ref": "#/definitions/generalPaymentDays2"
+        },
+        "generalPaymentTerms3": {
+          "$ref": "#/definitions/generalPaymentTerms3"
+        },
+        "generalPaymentDays3": {
+          "$ref": "#/definitions/generalPaymentDays3"
+        },
+        "generalPaymentTerms4": {
+          "$ref": "#/definitions/generalPaymentTerms4"
+        },
+        "generalPaymentDays4": {
+          "$ref": "#/definitions/generalPaymentDays4"
+        },
+        "generalPaymentTerms5": {
+          "$ref": "#/definitions/generalPaymentTerms5"
+        },
+        "generalPaymentDays5": {
+          "$ref": "#/definitions/generalPaymentDays5"
+        },
+        "importsList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/import"
+          }
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "required": [
+        "importsList"
+      ],
+      "additionalProperties": false
+    },
+    "import": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "date": {
+          "$ref": "#/definitions/date"
+        },
+        "amount": {
+          "$ref": "#/definitions/amount"
+        },
+        "currency": {
+          "$ref": "#/definitions/currency"
+        },
+        "dimension": {
+          "$ref": "#/definitions/dimension"
+        },
+        "country": {
+          "$ref": "#/definitions/country"
+        },
+        "countryList": {
+          "$ref": "#/definitions/countryList"
+        },
+        "paymentTerms1": {
+          "$ref": "#/definitions/paymentTerms1"
+        },
+        "paymentDays1": {
+          "$ref": "#/definitions/paymentDays1"
+        },
+        "paymentTermsText1": {
+          "$ref": "#/definitions/paymentTermsText1"
+        },
+        "termsQualifier1": {
+          "$ref": "#/definitions/termsQualifier1"
+        },
+        "paymentTerms2": {
+          "$ref": "#/definitions/paymentTerms2"
+        },
+        "paymentDays2": {
+          "$ref": "#/definitions/paymentDays2"
+        },
+        "paymentTermsText2": {
+          "$ref": "#/definitions/paymentTermsText2"
+        },
+        "termsQualifier2": {
+          "$ref": "#/definitions/termsQualifier2"
+        },
+        "paymentTerms3": {
+          "$ref": "#/definitions/paymentTerms3"
+        },
+        "paymentDays3": {
+          "$ref": "#/definitions/paymentDays3"
+        },
+        "paymentTermsText3": {
+          "$ref": "#/definitions/paymentTermsText3"
+        },
+        "termsQualifier3": {
+          "$ref": "#/definitions/termsQualifier3"
+        },
+        "paymentTerms4": {
+          "$ref": "#/definitions/paymentTerms4"
+        },
+        "paymentDays4": {
+          "$ref": "#/definitions/paymentDays4"
+        },
+        "paymentTermsText4": {
+          "$ref": "#/definitions/paymentTermsText4"
+        },
+        "termsQualifier4": {
+          "$ref": "#/definitions/termsQualifier4"
+        },
+        "paymentTerms5": {
+          "$ref": "#/definitions/paymentTerms5"
+        },
+        "paymentDays5": {
+          "$ref": "#/definitions/paymentDays5"
+        },
+        "paymentTermsText5": {
+          "$ref": "#/definitions/paymentTermsText5"
+        },
+        "termsQualifier5": {
+          "$ref": "#/definitions/termsQualifier5"
+        },
+        "retail": {
+          "$ref": "#/definitions/retail"
+        }
+      },
+      "required": [
+        "currency",
+        "dimension"
+      ],
+      "additionalProperties": false
+    },
+    "amount": {
+      "type": "number",
+      "description": ""
+    },
+    "exports": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "generalPaymentTerms1": {
+          "$ref": "#/definitions/generalPaymentTerms1"
+        },
+        "generalPaymentDays1": {
+          "$ref": "#/definitions/generalPaymentDays1"
+        },
+        "generalPaymentTerms2": {
+          "$ref": "#/definitions/generalPaymentTerms2"
+        },
+        "generalPaymentDays2": {
+          "$ref": "#/definitions/generalPaymentDays2"
+        },
+        "generalPaymentTerms3": {
+          "$ref": "#/definitions/generalPaymentTerms3"
+        },
+        "generalPaymentDays3": {
+          "$ref": "#/definitions/generalPaymentDays3"
+        },
+        "generalPaymentTerms4": {
+          "$ref": "#/definitions/generalPaymentTerms4"
+        },
+        "generalPaymentDays4": {
+          "$ref": "#/definitions/generalPaymentDays4"
+        },
+        "generalPaymentTerms5": {
+          "$ref": "#/definitions/generalPaymentTerms5"
+        },
+        "generalPaymentDays5": {
+          "$ref": "#/definitions/generalPaymentDays5"
+        },
+        "exportsList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/export"
+          }
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "export": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "date": {
+          "$ref": "#/definitions/date"
+        },
+        "amount": {
+          "$ref": "#/definitions/amount"
+        },
+        "currency": {
+          "$ref": "#/definitions/currency"
+        },
+        "dimension": {
+          "$ref": "#/definitions/dimension"
+        },
+        "country": {
+          "$ref": "#/definitions/country"
+        },
+        "countryList": {
+          "$ref": "#/definitions/countryList"
+        },
+        "paymentTerms1": {
+          "$ref": "#/definitions/paymentTerms1"
+        },
+        "paymentDays1": {
+          "$ref": "#/definitions/paymentDays1"
+        },
+        "paymentTermsText1": {
+          "$ref": "#/definitions/paymentTermsText1"
+        },
+        "termsQualifier1": {
+          "$ref": "#/definitions/termsQualifier1"
+        },
+        "paymentTerms2": {
+          "$ref": "#/definitions/paymentTerms2"
+        },
+        "paymentDays2": {
+          "$ref": "#/definitions/paymentDays2"
+        },
+        "paymentTermsText2": {
+          "$ref": "#/definitions/paymentTermsText2"
+        },
+        "termsQualifier2": {
+          "$ref": "#/definitions/termsQualifier2"
+        },
+        "paymentTerms3": {
+          "$ref": "#/definitions/paymentTerms3"
+        },
+        "paymentDays3": {
+          "$ref": "#/definitions/paymentDays3"
+        },
+        "paymentTermsText3": {
+          "$ref": "#/definitions/paymentTermsText3"
+        },
+        "termsQualifier3": {
+          "$ref": "#/definitions/termsQualifier3"
+        },
+        "paymentTerms4": {
+          "$ref": "#/definitions/paymentTerms4"
+        },
+        "paymentDays4": {
+          "$ref": "#/definitions/paymentDays4"
+        },
+        "paymentTermsText4": {
+          "$ref": "#/definitions/paymentTermsText4"
+        },
+        "termsQualifier4": {
+          "$ref": "#/definitions/termsQualifier4"
+        },
+        "paymentTerms5": {
+          "$ref": "#/definitions/paymentTerms5"
+        },
+        "paymentDays5": {
+          "$ref": "#/definitions/paymentDays5"
+        },
+        "paymentTermsText5": {
+          "$ref": "#/definitions/paymentTermsText5"
+        },
+        "termsQualifier5": {
+          "$ref": "#/definitions/termsQualifier5"
+        },
+        "retail": {
+          "$ref": "#/definitions/retail"
+        }
+      },
+      "required": [
+        "currency",
+        "dimension"
+      ],
+      "additionalProperties": false
+    },
+    "balanceSheet": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "balanceSheetItems": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/balanceSheetItem"
+          }
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        },
+        "historicalExchangeRates": {
+          "$ref": "#/definitions/historicalExchangeRates"
+        }
+      },
+      "additionalProperties": false
+    },
+    "consolidatedBalanceSheet": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "financialStatements": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/balanceSheetItem"
+          }
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        },
+        "historicalExchangeRates": {
+          "$ref": "#/definitions/historicalExchangeRates"
+        }
+      },
+      "additionalProperties": false
+    },
+    "indicator": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "date": {
+          "$ref": "#/definitions/date"
+        },
+        "fromDate": {
+          "$ref": "#/definitions/fromDate"
+        },
+        "toDate": {
+          "$ref": "#/definitions/toDate"
+        },
+        "fromAmount": {
+          "$ref": "#/definitions/fromAmount"
+        },
+        "toAmount": {
+          "$ref": "#/definitions/toAmount"
+        },
+        "currency": {
+          "$ref": "#/definitions/currency"
+        },
+        "dimension": {
+          "$ref": "#/definitions/dimension"
+        },
+        "measure": {
+          "$ref": "#/definitions/measure"
+        },
+        "labelType": {
+          "$ref": "#/definitions/labelType"
+        },
+        "partialBalanceSheet": {
+          "$ref": "#/definitions/partialBalanceSheet"
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "required": [
+        "type",
+        "fromAmount",
+        "currency",
+        "dimension",
+        "measure"
+      ],
+      "additionalProperties": false
+    },
+    "historicalExchangeRates": {
+      "type": "array",
+      "description": "",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/rate"
+      },
+      "additionalItems": false
+    },
+    "rate": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "year": {
+          "$ref": "#/definitions/year"
+        },
+        "exchangeRate": {
+          "$ref": "#/definitions/exchangeRate"
+        },
+        "currency": {
+          "type": "string",
+          "description": ""
+        },
+        "referenceCurrency": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "required": [
+        "currency",
+        "referenceCurrency"
+      ],
+      "additionalProperties": false
+    },
+    "year": {
+      "type": "number",
+      "description": ""
+    },
+    "exchangeRate": {
+      "type": "number",
+      "description": ""
+    },
+    "workforce": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/indicator"
+      },
+      "additionalItems": false
+    },
+    "tradeHistory": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/indicator"
+      },
+      "additionalItems": false
+    },
+    "inventory": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/indicator"
+      },
+      "additionalItems": false
+    },
+    "turnover": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/indicator"
+      },
+      "additionalItems": false
+    },
+    "liabilities": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/indicator"
+      },
+      "additionalItems": false
+    },
+    "claimsReceiveable": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/indicator"
+      },
+      "additionalItems": false
+    },
+    "vehicles": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/indicator"
+      },
+      "additionalItems": false
+    },
+    "realEstates": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "realEstatesList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/realEstate"
+          }
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "realEstate": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "address": {
+          "$ref": "#/definitions/address"
+        },
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "size": {
+          "$ref": "#/definitions/size"
+        },
+        "sizeDimension": {
+          "$ref": "#/definitions/sizeDimension"
+        },
+        "value": {
+          "type": "number",
+          "description": ""
+        },
+        "valueDimension": {
+          "$ref": "#/definitions/valueDimension"
+        },
+        "valueCurrency": {
+          "$ref": "#/definitions/valueCurrency"
+        },
+        "debt": {
+          "$ref": "#/definitions/debt"
+        },
+        "share": {
+          "$ref": "#/definitions/share"
+        },
+        "ownership": {
+          "$ref": "#/definitions/ownership"
+        },
+        "rent": {
+          "$ref": "#/definitions/rent"
+        },
+        "areaComment": {
+          "$ref": "#/definitions/areaComment"
+        },
+        "condition": {
+          "$ref": "#/definitions/condition"
+        },
+        "equipment": {
+          "$ref": "#/definitions/equipment"
+        },
+        "premisesShared": {
+          "$ref": "#/definitions/premisesShared"
+        }
+      },
+      "required": [
+        "type",
+        "sizeDimension",
+        "valueDimension",
+        "valueCurrency",
+        "debt"
+      ],
+      "additionalProperties": false
+    },
+    "size": {
+      "type": "number",
+      "description": ""
+    },
+    "sizeDimension": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "required": [
+        "value",
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "valueDimension": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "required": [
+        "value",
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "valueCurrency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "debt": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "required": [
+        "value",
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "share": {
+      "type": "number",
+      "description": ""
+    },
+    "rent": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "paymentper": {
+          "type": "string",
+          "description": ""
+        },
+        "currency": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "required": [
+        "paymentper",
+        "currency",
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "areaComment": {
+      "type": "string",
+      "description": ""
+    },
+    "condition": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "required": [
+        "value",
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "equipment": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "required": [
+        "value",
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "premisesShared": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "required": [
+        "value",
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "linkedCompanies": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "linkedCompaniesList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/linkedCompany"
+          }
+        },
+        "functionaryCompanies": {
+          "$ref": "#/definitions/functionaryCompanies"
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "linkedCompany": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "name": {
+          "$ref": "#/definitions/name"
+        },
+        "address": {
+          "$ref": "#/definitions/address"
+        },
+        "intercreditNumber": {
+          "$ref": "#/definitions/intercreditNumber"
+        },
+        "registrationCountry": {
+          "$ref": "#/definitions/registrationCountry"
+        },
+        "insolvency": {
+          "$ref": "#/definitions/insolvency"
+        },
+        "companyStatus": {
+          "$ref": "#/definitions/companyStatus"
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "required": [
+        "type",
+        "name",
+        "intercreditNumber",
+        "registrationCountry"
+      ],
+      "additionalProperties": false
+    },
+    "registrationCountry": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "bankConnections": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "bankConnectionsList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/bankConnection"
+          }
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "bankConnection": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "bank": {
+          "$ref": "#/definitions/bank"
+        },
+        "located": {
+          "$ref": "#/definitions/located"
+        },
+        "accountNumber": {
+          "$ref": "#/definitions/accountNumber"
+        },
+        "iban": {
+          "$ref": "#/definitions/iban"
+        },
+        "bic": {
+          "$ref": "#/definitions/bic"
+        },
+        "accountOpenedDate": {
+          "$ref": "#/definitions/accountOpenedDate"
+        }
+      },
+      "required": [
+        "bank",
+        "located",
+        "accountNumber"
+      ],
+      "additionalProperties": false
+    },
+    "bank": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "intercreditNumber": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "required": [
+        "intercreditNumber"
+      ],
+      "additionalProperties": false
+    },
+    "located": {
+      "type": "string",
+      "description": ""
+    },
+    "accountNumber": {
+      "type": "string",
+      "description": ""
+    },
+    "iban": {
+      "type": "string",
+      "description": ""
+    },
+    "bic": {
+      "type": "string",
+      "description": ""
+    },
+    "accountOpenedDate": {
+      "type": "string",
+      "description": ""
+    },
+    "dates": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "dateItems": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/dateItem"
+          }
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "dateItem": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "date": {
+          "$ref": "#/definitions/date"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "additionalInformation": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "additionalInformationList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/additionalInformationItem"
+          },
+          "additionalItems": false
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "additionalInformationItem": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "value": {
+          "$ref": "#/definitions/value"
+        }
+      },
+      "required": [
+        "type",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "additionalComments": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/additionalCommentItem"
+      },
+      "additionalItems": false
+    },
+    "additionalCommentItem": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "text": {
+          "$ref": "#/definitions/text"
+        },
+        "parameter": {
+          "$ref": "#/definitions/parameter"
+        }
+      },
+      "required": [
+        "type",
+        "text",
+        "parameter"
+      ],
+      "additionalProperties": false
+    },
+    "text": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "parameter": {
+      "type": "string",
+      "description": ""
+    },
+    "businessTrends": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "solvencyList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/solvency"
+          },
+          "additionalItems": false
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "solvency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "text": {
+          "$ref": "#/definitions/text"
+        },
+        "textCode": {
+          "$ref": "#/definitions/textCode"
+        }
+      },
+      "required": [
+        "type",
+        "text"
+      ]
+    },
+    "companyDevelopment": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "solvencyList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/solvency"
+          },
+          "additionalItems": false
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "research": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "solvencyList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/solvency"
+          },
+          "additionalItems": false
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "payments": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "solvencyList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/solvency"
+          },
+          "additionalItems": false
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "paymentIncidentAmounts": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/paymentIncidentAmount"
+      },
+      "additionalItems": false
+    },
+    "paymentIncidentAmount": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "paymentAmountType": {
+          "$ref": "#/definitions/paymentAmountType"
+        },
+        "paymentIncidentCategory": {
+          "$ref": "#/definitions/paymentIncidentCategory"
+        },
+        "paymentIncidentType": {
+          "$ref": "#/definitions/paymentIncidentType"
+        },
+        "paymentIncidentValue": {
+          "$ref": "#/definitions/paymentIncidentValue"
+        },
+        "currency": {
+          "$ref": "#/definitions/currency"
+        },
+        "validFrom": {
+          "$ref": "#/definitions/validFrom"
+        },
+        "validTo": {
+          "$ref": "#/definitions/validTo"
+        }
+      },
+      "required": [
+        "paymentAmountType",
+        "paymentIncidentCategory",
+        "paymentIncidentType",
+        "paymentIncidentValue",
+        "currency"
+      ],
+      "additionalProperties": false
+    },
+    "paymentAmountType": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "paymentIncidentCategory": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "paymentIncidentType": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "paymentIncidentValue": {
+      "type": "number",
+      "description": ""
+    },
+    "validFrom": {
+      "type": "number",
+      "description": ""
+    },
+    "validTo": {
+      "type": "number",
+      "description": ""
+    },
+    "paymentIncidentCases": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/paymentIncidentCase"
+      },
+      "additionalItems": false
+    },
+    "paymentIncidentCase": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "paymentIncidentType": {
+          "$ref": "#/definitions/paymentIncidentType"
+        },
+        "paymentIncidentCaseRegistrationDate": {
+          "$ref": "#/definitions/paymentIncidentCaseRegistrationDate"
+        },
+        "paymentIncidentCaseRefusalReason": {
+          "$ref": "#/definitions/paymentIncidentCaseRefusalReason"
+        },
+        "paymentIncidentCaseInterdictionPeriod": {
+          "$ref": "#/definitions/paymentIncidentCaseInterdictionPeriod"
+        },
+        "paymentIncidentCaseCategory": {
+          "$ref": "#/definitions/paymentIncidentCaseCategory"
+        },
+        "paymentIncidentCaseTotalInstruments": {
+          "$ref": "#/definitions/paymentIncidentCaseTotalInstruments"
+        }
+      },
+      "required": [
+        "paymentIncidentType",
+        "paymentIncidentCaseRefusalReason",
+        "paymentIncidentCaseInterdictionPeriod",
+        "paymentIncidentCaseCategory",
+        "paymentIncidentCaseTotalInstruments"
+      ],
+      "additionalProperties": false
+    },
+    "paymentIncidentCaseRegistrationDate": {
+      "type": "number",
+      "description": ""
+    },
+    "paymentIncidentCaseRefusalReason": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "paymentIncidentCaseInterdictionPeriod": {
+      "type": "string",
+      "description": ""
+    },
+    "paymentIncidentCaseCategory": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "paymentIncidentCaseTotalInstruments": {
+      "type": "string",
+      "description": ""
+    },
+    "assessment": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "solvencyList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/solvency"
+          },
+          "additionalItems": false
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "insolvency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "solvencyList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/solvency"
+          },
+          "additionalItems": false
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "maximumCredit": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "indicator": {
+          "$ref": "#/definitions/indicator"
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "paymentIndex": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "solvencyList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/solvency"
+          }
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "maximumCreditHistory": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/maximumCreditEntry"
+      },
+      "additionalProperties": false
+    },
+    "maximumCreditEntry": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "maximumCredit": {
+          "$ref": "#/definitions/maximumCredit"
+        },
+        "date": {
+          "$ref": "#/definitions/date"
+        }
+      },
+      "required": [
+        "maximumCredit"
+      ],
+      "additionalProperties": false
+    },
+    "paymentIndexHistory": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/solvencyEntry"
+      },
+      "additionalItems": false
+    },
+    "solvencyEntry": {
+      "type": "object",
+      "description": "",
+      "allOf": [
+        {
+          "$ref": "#/definitions/solvency"
+        },
+        {
+          "properties": {
+            "date": {
+              "$ref": "#/definitions/date"
+            }
+          }
+        }
+      ]
+    },
+    "customerSpecificMaxCredits": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/customerSpecificMaxCredit"
+      },
+      "additionalItems": false
+    },
+    "customerSpecificMaxCredit": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "csMaxCreditValue": {
+          "$ref": "#/definitions/csMaxCreditValue"
+        },
+        "csMaxCreditCurrency": {
+          "$ref": "#/definitions/csMaxCreditCurrency"
+        },
+        "csMaxCreditAssessment": {
+          "$ref": "#/definitions/csMaxCreditAssessment"
+        },
+        "csMaxCreditCode": {
+          "$ref": "#/definitions/csMaxCreditCode"
+        }
+      },
+      "required": [
+        "type",
+        "csMaxCreditValue",
+        "csMaxCreditCurrency"
+      ],
+      "additionalProperties": false
+    },
+    "csMaxCreditValue": {
+      "type": "string",
+      "description": ""
+    },
+    "csMaxCreditCurrency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "csMaxCreditAssessment": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "csMaxCreditCode": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "description": {
+      "type": "string",
+      "description": ""
+    },
+    "nationalNumber": {
+      "type": "string",
+      "description": ""
+    },
+    "email": {
+      "type": "string",
+      "description": ""
+    },
+    "internet": {
+      "type": "string",
+      "description": ""
+    },
+    "companyComment": {
+      "type": "string",
+      "description": ""
+    },
+    "addresses": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "addressList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/address"
+          }
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "dclInsurance": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "text": {
+          "$ref": "#/definitions/text"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "balanceSheetItem": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "indicators": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/indicator"
+          }
+        },
+        "type": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "negative": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "reason": {
+          "$ref": "#/definitions/reason"
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        },
+        "type": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "required": [
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "reason": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "nationalCurrency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "statisticalNumber": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "value": {
+          "$ref": "#/definitions/value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "senderId": {
+      "type": "string",
+      "description": ""
+    },
+    "customer": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "customerId": {
+          "$ref": "#/definitions/customerId"
+        },
+        "name": {
+          "$ref": "#/definitions/name"
+        },
+        "recipientId": {
+          "$ref": "#/definitions/recipientId"
+        },
+        "city": {
+          "$ref": "#/definitions/city"
+        },
+        "country": {
+          "$ref": "#/definitions/country"
+        },
+        "street": {
+          "$ref": "#/definitions/street"
+        },
+        "houseNumber": {
+          "$ref": "#/definitions/houseNumber"
+        },
+        "zipcode": {
+          "$ref": "#/definitions/zipcode"
+        }
+      },
+      "required": [
+        "customerId",
+        "name",
+        "recipientId",
+        "city",
+        "country",
+        "street",
+        "houseNumber",
+        "zipcode"
+      ],
+      "additionalProperties": false
+    },
+    "recipientId": {
+      "type": "string",
+      "description": ""
+    },
+    "reportMimeType": {
+      "type": "string",
+      "description": ""
+    },
+    "requestedCompanyInformation": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "companyName": {
+          "$ref": "#/definitions/companyName"
+        },
+        "registrationCountry": {
+          "$ref": "#/definitions/registrationCountry"
+        },
+        "zipcode": {
+          "$ref": "#/definitions/zipcode"
+        },
+        "city": {
+          "$ref": "#/definitions/city"
+        },
+        "street": {
+          "$ref": "#/definitions/street"
+        },
+        "houseNumber": {
+          "$ref": "#/definitions/houseNumber"
+        },
+        "additionalAddressLine": {
+          "$ref": "#/definitions/additionalAddressLine"
+        },
+        "country": {
+          "$ref": "#/definitions/country"
+        },
+        "telephonAreacode": {
+          "$ref": "#/definitions/telephonAreacode"
+        },
+        "telephoneNumber": {
+          "$ref": "#/definitions/telephoneNumber"
+        },
+        "nationalNumber": {
+          "$ref": "#/definitions/nationalNumber"
+        }
+      },
+      "required": [
+        "companyName",
+        "registrationCountry",
+        "zipcode",
+        "city",
+        "street",
+        "houseNumber",
+        "additionalAddressLine",
+        "country",
+        "telephonAreacode",
+        "telephoneNumber",
+        "nationalNumber"
+      ],
+      "additionalProperties": false
+    },
+    "telephonAreacode": {
+      "type": "string",
+      "description": ""
+    },
+    "telephoneNumber": {
+      "type": "string",
+      "description": ""
+    },
+    "additionalinformationtype": {
+      "type": "string",
+      "description": ""
+    },
+    "product": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "primaryNationalIdentifier": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "value": {
+          "$ref": "#/definitions/value"
+        }
+      },
+      "required": [
+        "type",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "textCode": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        },
+        "exactValue": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "international": {
+      "type": "string",
+      "description": ""
+    },
+    "creditScoring": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "scoringMessageBegin": {
+          "$ref": "#/definitions/scoringMessageBegin"
+        },
+        "scoringReferences": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/scoringReference"
+          }
+        },
+        "scoringNameAndAddress": {
+          "$ref": "#/definitions/scoringNameAndAddress"
+        },
+        "scoringAdditionalBuyerInformation": {
+          "$ref": "#/definitions/scoringAdditionalBuyerInformation"
+        },
+        "scoringFinancialAddedInformation": {
+          "$ref": "#/definitions/scoringFinancialAddedInformation"
+        },
+        "scoringQualityNote": {
+          "$ref": "#/definitions/scoringQualityNote"
+        },
+        "scoringRiskSurface": {
+          "$ref": "#/definitions/scoringRiskSurface"
+        }
+      },
+      "required": [
+        "scoringMessageBegin",
+        "scoringNameAndAddress",
+        "scoringAdditionalBuyerInformation",
+        "scoringFinancialAddedInformation",
+        "scoringQualityNote",
+        "scoringRiskSurface"
+      ],
+      "additionalProperties": false
+    },
+    "scoringMessageBegin": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "scoringDocumentName": {
+          "$ref": "#/definitions/scoringDocumentName"
+        },
+        "scoringDocumentDatetime": {
+          "$ref": "#/definitions/scoringDocumentDatetime"
+        },
+        "scoringDocumentNumber": {
+          "$ref": "#/definitions/scoringDocumentNumber"
+        }
+      },
+      "required": [
+        "scoringDocumentName",
+        "scoringDocumentDatetime",
+        "scoringDocumentNumber"
+      ],
+      "additionalProperties": false
+    },
+    "scoringReference": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "scoringReferenceQualifier": {
+          "$ref": "#/definitions/scoringReferenceQualifier"
+        },
+        "scoringReferenceNumber": {
+          "$ref": "#/definitions/scoringReferenceNumber"
+        }
+      },
+      "required": [
+        "scoringReferenceQualifier",
+        "scoringReferenceNumber"
+      ],
+      "additionalProperties": false
+    },
+    "scoringNameAndAddress": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "scoringPartyQualifier": {
+          "$ref": "#/definitions/scoringPartyQualifier"
+        },
+        "scoringPartyName": {
+          "$ref": "#/definitions/scoringPartyName"
+        },
+        "scoringStreet": {
+          "$ref": "#/definitions/scoringStreet"
+        },
+        "scoringCity": {
+          "$ref": "#/definitions/scoringCity"
+        },
+        "scoringZipcode": {
+          "$ref": "#/definitions/scoringZipcode"
+        },
+        "scoringCountry": {
+          "$ref": "#/definitions/scoringCountry"
+        }
+      },
+      "required": [
+        "scoringPartyQualifier",
+        "scoringPartyName",
+        "scoringStreet",
+        "scoringCity",
+        "scoringZipcode",
+        "scoringCountry"
+      ],
+      "additionalProperties": false
+    },
+    "scoringAdditionalBuyerInformation": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "scoringActivityCode": {
+          "$ref": "#/definitions/scoringActivityCode"
+        }
+      },
+      "required": [
+        "scoringActivityCode"
+      ],
+      "additionalProperties": false
+    },
+    "scoringFinancialAddedInformation": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "scoringCurrency": {
+          "$ref": "#/definitions/scoringCurrency"
+        }
+      },
+      "required": [
+        "scoringCurrency"
+      ],
+      "additionalProperties": false
+    },
+    "scoringQualityNote": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "scoringCreationDate": {
+          "$ref": "#/definitions/scoringCreationDate"
+        },
+        "scoringEconomicResult": {
+          "$ref": "#/definitions/scoringEconomicResult"
+        },
+        "scoringPaymentExperience": {
+          "$ref": "#/definitions/scoringPaymentExperience"
+        },
+        "scoringAlarm": {
+          "$ref": "#/definitions/scoringAlarm"
+        }
+      },
+      "required": [
+        "scoringCreationDate",
+        "scoringEconomicResult",
+        "scoringPaymentExperience",
+        "scoringAlarm"
+      ],
+      "additionalProperties": false
+    },
+    "scoringRiskSurface": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "scoringSummaryYear": {
+          "$ref": "#/definitions/scoringSummaryYear"
+        },
+        "scoringNominalCapital": {
+          "$ref": "#/definitions/scoringNominalCapital"
+        },
+        "scoringTurnover": {
+          "$ref": "#/definitions/scoringTurnover"
+        },
+        "scoringWorkforce": {
+          "$ref": "#/definitions/scoringWorkforce"
+        },
+        "scoringLegalform": {
+          "$ref": "#/definitions/scoringLegalform"
+        },
+        "scoringTotalAssets": {
+          "$ref": "#/definitions/scoringTotalAssets"
+        },
+        "scoringWorkingCapital": {
+          "$ref": "#/definitions/scoringWorkingCapital"
+        },
+        "scoringNetWorths": {
+          "$ref": "#/definitions/scoringNetWorths"
+        },
+        "scoringStocks": {
+          "$ref": "#/definitions/scoringStocks"
+        },
+        "scoringIssuedCapital": {
+          "$ref": "#/definitions/scoringIssuedCapital"
+        }
+      },
+      "required": [
+        "scoringSummaryYear",
+        "scoringNominalCapital",
+        "scoringTurnover",
+        "scoringWorkforce",
+        "scoringLegalform",
+        "scoringTotalAssets",
+        "scoringWorkingCapital",
+        "scoringNetWorths",
+        "scoringStocks",
+        "scoringIssuedCapital"
+      ],
+      "additionalProperties": false
+    },
+    "scoringDocumentName": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringDocumentDatetime": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringDocumentNumber": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringReferenceQualifier": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringReferenceNumber": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringPartyQualifier": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringPartyName": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringStreet": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringCity": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringZipcode": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringCountry": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringActivityCode": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringCurrency": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringCreationDate": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringEconomicResult": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringPaymentExperience": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringAlarm": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringSummaryYear": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringNominalCapital": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringTurnover": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringWorkforce": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringLegalform": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringTotalAssets": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringWorkingCapital": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringNetWorths": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringStocks": {
+      "type": "string",
+      "description": ""
+    },
+    "scoringIssuedCapital": {
+      "type": "string",
+      "description": ""
+    },
+    "keyData": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "keyDataIndicators": {
+          "$ref": "#/definitions/keyDataIndicators"
+        },
+        "keyDataRatios": {
+          "$ref": "#/definitions/keyDataRatios"
+        }
+      },
+      "additionalProperties": false
+    },
+    "keyDataIndicators": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/indicator"
+      },
+      "additionalItems": false
+    },
+    "keyDataRatios": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/ratio"
+      },
+      "additionalItems": false
+    },
+    "ratio": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "description": {
+          "$ref": "#/definitions/description"
+        },
+        "date": {
+          "$ref": "#/definitions/date"
+        },
+        "fromDate": {
+          "$ref": "#/definitions/fromDate"
+        },
+        "toDate": {
+          "$ref": "#/definitions/toDate"
+        },
+        "fromAmount": {
+          "$ref": "#/definitions/fromAmount"
+        },
+        "currency": {
+          "$ref": "#/definitions/currency"
+        },
+        "resultValue": {
+          "$ref": "#/definitions/resultValue"
+        },
+        "resultText": {
+          "$ref": "#/definitions/resultText"
+        },
+        "resultDate": {
+          "$ref": "#/definitions/resultDate"
+        },
+        "healthyValue": {
+          "$ref": "#/definitions/healthyValue"
+        }
+      },
+      "required": [
+        "type",
+        "description",
+        "fromAmount",
+        "currency"
+      ],
+      "additionalProperties": false
+    },
+    "healthyValue": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "amount": {
+          "$ref": "#/definitions/amount"
+        },
+        "currency": {
+          "$ref": "#/definitions/currency"
+        }
+      },
+      "required": [
+        "currency"
+      ],
+      "additionalProperties": false
+    },
+    "ratios": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/ratio"
+      },
+      "additionalItems": false
+    },
+    "resultValue": {
+      "type": "string",
+      "description": ""
+    },
+    "resultText": {
+      "type": "string",
+      "description": ""
+    },
+    "resultDate": {
+      "type": "string",
+      "description": ""
+    },
+    "calculatedKeyDataInfo": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "calculatedKeyData": {
+          "$ref": "#/definitions/calculatedKeyData"
+        }
+      },
+      "additionalProperties": false
+    },
+    "calculatedKeyData": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/calculatedKeyDataItem"
+      },
+      "additionalItems": false
+    },
+    "calculatedKeyDataItem": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "keyDataValue": {
+          "$ref": "#/definitions/keyDataValue"
+        },
+        "keyDataCurrency": {
+          "$ref": "#/definitions/keyDataCurrency"
+        },
+        "keyDataAssessment": {
+          "$ref": "#/definitions/keyDataAssessment"
+        },
+        "keyDataComment": {
+          "$ref": "#/definitions/keyDataComment"
+        }
+      },
+      "required": [
+        "type",
+        "keyDataValue",
+        "keyDataCurrency"
+      ],
+      "additionalProperties": false
+    },
+    "keyDataValue": {
+      "type": "string",
+      "description": ""
+    },
+    "keyDataCurrency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "keyDataAssessment": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "keyDataComment": {
+      "type": "string",
+      "description": ""
+    },
+    "sectorScore": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "activity": {
+          "$ref": "#/definitions/activity"
+        },
+        "date": {
+          "$ref": "#/definitions/date"
+        },
+        "score": {
+          "$ref": "#/definitions/score"
+        },
+        "companyCountInsolvent": {
+          "$ref": "#/definitions/companyCountInsolvent"
+        },
+        "companyCountHighRisk": {
+          "$ref": "#/definitions/companyCountHighRisk"
+        },
+        "companyCountMediumRisk": {
+          "$ref": "#/definitions/companyCountMediumRisk"
+        },
+        "companyCountLowRisk": {
+          "$ref": "#/definitions/companyCountLowRisk"
+        },
+        "companyPercentInsolvent": {
+          "$ref": "#/definitions/companyPercentInsolvent"
+        },
+        "companyPercentHighRisk": {
+          "$ref": "#/definitions/companyPercentHighRisk"
+        },
+        "companyPercentMediumRisk": {
+          "$ref": "#/definitions/companyPercentMediumRisk"
+        },
+        "companyPercentLowRisk": {
+          "$ref": "#/definitions/companyPercentLowRisk"
+        }
+      },
+      "required": [
+        "activity",
+        "score"
+      ],
+      "additionalProperties": false
+    },
+    "companyCountInsolvent": {
+      "type": "number",
+      "description": ""
+    },
+    "companyCountHighRisk": {
+      "type": "number",
+      "description": ""
+    },
+    "companyCountMediumRisk": {
+      "type": "number",
+      "description": ""
+    },
+    "companyCountLowRisk": {
+      "type": "number",
+      "description": ""
+    },
+    "companyPercentInsolvent": {
+      "type": "number",
+      "description": ""
+    },
+    "companyPercentHighRisk": {
+      "type": "number",
+      "description": ""
+    },
+    "companyPercentMediumRisk": {
+      "type": "number",
+      "description": ""
+    },
+    "companyPercentLowRisk": {
+      "type": "number",
+      "description": ""
+    },
+    "shareCapital": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "nominalCapitalAmount": {
+          "$ref": "#/definitions/nominalCapitalAmount"
+        },
+        "nominalCapitalCurrency": {
+          "$ref": "#/definitions/nominalCapitalCurrency"
+        },
+        "nominalCapitalDate": {
+          "$ref": "#/definitions/nominalCapitalDate"
+        },
+        "nominalCapitalShares1Number": {
+          "$ref": "#/definitions/nominalCapitalShares1Number"
+        },
+        "nominalCapitalShares1Class": {
+          "$ref": "#/definitions/nominalCapitalShares1Class"
+        },
+        "nominalCapitalShares1ValuePerShareCurrency": {
+          "$ref": "#/definitions/nominalCapitalShares1ValuePerShareCurrency"
+        },
+        "nominalCapitalShares1ValuePerShareAmount": {
+          "$ref": "#/definitions/nominalCapitalShares1ValuePerShareAmount"
+        },
+        "nominalCapitalShares2Number": {
+          "$ref": "#/definitions/nominalCapitalShares2Number"
+        },
+        "nominalCapitalShares2Class": {
+          "$ref": "#/definitions/nominalCapitalShares2Class"
+        },
+        "nominalCapitalShares2ValuePerShareCurrency": {
+          "$ref": "#/definitions/nominalCapitalShares2ValuePerShareCurrency"
+        },
+        "nominalCapitalShares2ValuePerShareAmount": {
+          "$ref": "#/definitions/nominalCapitalShares2ValuePerShareAmount"
+        },
+        "nominalCapitalShares3Number": {
+          "$ref": "#/definitions/nominalCapitalShares3Number"
+        },
+        "nominalCapitalShares3Class": {
+          "$ref": "#/definitions/nominalCapitalShares3Class"
+        },
+        "nominalCapitalShares3ValuePerShareCurrency": {
+          "$ref": "#/definitions/nominalCapitalShares3ValuePerShareCurrency"
+        },
+        "nominalCapitalShares3ValuePerShareAmount": {
+          "$ref": "#/definitions/nominalCapitalShares3ValuePerShareAmount"
+        },
+        "nominalCapitalPrevious1Currency": {
+          "$ref": "#/definitions/nominalCapitalPrevious1Currency"
+        },
+        "nominalCapitalPrevious1Amount": {
+          "$ref": "#/definitions/nominalCapitalPrevious1Amount"
+        },
+        "nominalCapitalPrevious1Date": {
+          "$ref": "#/definitions/nominalCapitalPrevious1Date"
+        },
+        "nominalCapitalPrevious2Currency": {
+          "$ref": "#/definitions/nominalCapitalPrevious2Currency"
+        },
+        "nominalCapitalPrevious2Amount": {
+          "$ref": "#/definitions/nominalCapitalPrevious2Amount"
+        },
+        "nominalCapitalPrevious2Date": {
+          "$ref": "#/definitions/nominalCapitalPrevious2Date"
+        },
+        "nominalCapitalPrevious3Currency": {
+          "$ref": "#/definitions/nominalCapitalPrevious3Currency"
+        },
+        "nominalCapitalPrevious3Amount": {
+          "$ref": "#/definitions/nominalCapitalPrevious3Amount"
+        },
+        "nominalCapitalPrevious3Date": {
+          "$ref": "#/definitions/nominalCapitalPrevious3Date"
+        },
+        "issuedCapitalAmount": {
+          "$ref": "#/definitions/issuedCapitalAmount"
+        },
+        "issuedCapitalCurrency": {
+          "$ref": "#/definitions/issuedCapitalCurrency"
+        },
+        "issuedCapitalDate": {
+          "$ref": "#/definitions/issuedCapitalDate"
+        },
+        "issuedCapitalShares1Number": {
+          "$ref": "#/definitions/issuedCapitalShares1Number"
+        },
+        "issuedCapitalShares1Class": {
+          "$ref": "#/definitions/issuedCapitalShares1Class"
+        },
+        "issuedCapitalShares1ValuePerShareCurrency": {
+          "$ref": "#/definitions/issuedCapitalShares1ValuePerShareCurrency"
+        },
+        "issuedCapitalShares1ValuePerShareAmount": {
+          "$ref": "#/definitions/issuedCapitalShares1ValuePerShareAmount"
+        },
+        "issuedCapitalShares2Number": {
+          "$ref": "#/definitions/issuedCapitalShares2Number"
+        },
+        "issuedCapitalShares2Class": {
+          "$ref": "#/definitions/issuedCapitalShares2Class"
+        },
+        "issuedCapitalShares2ValuePerShareCurrency": {
+          "$ref": "#/definitions/issuedCapitalShares2ValuePerShareCurrency"
+        },
+        "issuedCapitalShares2ValuePerShareAmount": {
+          "$ref": "#/definitions/issuedCapitalShares2ValuePerShareAmount"
+        },
+        "issuedCapitalShares3Number": {
+          "$ref": "#/definitions/issuedCapitalShares3Number"
+        },
+        "issuedCapitalShares3Class": {
+          "$ref": "#/definitions/issuedCapitalShares3Class"
+        },
+        "issuedCapitalShares3ValuePerShareCurrency": {
+          "$ref": "#/definitions/issuedCapitalShares3ValuePerShareCurrency"
+        },
+        "issuedCapitalShares3ValuePerShareAmount": {
+          "$ref": "#/definitions/issuedCapitalShares3ValuePerShareAmount"
+        },
+        "issuedCapitalPrevious1Currency": {
+          "$ref": "#/definitions/issuedCapitalPrevious1Currency"
+        },
+        "issuedCapitalPrevious1Amount": {
+          "$ref": "#/definitions/issuedCapitalPrevious1Amount"
+        },
+        "issuedCapitalPrevious1Date": {
+          "$ref": "#/definitions/issuedCapitalPrevious1Date"
+        },
+        "issuedCapitalPrevious2Currency": {
+          "$ref": "#/definitions/issuedCapitalPrevious2Currency"
+        },
+        "issuedCapitalPrevious2Amount": {
+          "$ref": "#/definitions/issuedCapitalPrevious2Amount"
+        },
+        "issuedCapitalPrevious2Date": {
+          "$ref": "#/definitions/issuedCapitalPrevious2Date"
+        },
+        "issuedCapitalPrevious3Currency": {
+          "$ref": "#/definitions/issuedCapitalPrevious3Currency"
+        },
+        "issuedCapitalPrevious3Amount": {
+          "$ref": "#/definitions/issuedCapitalPrevious3Amount"
+        },
+        "issuedCapitalPrevious3Date": {
+          "$ref": "#/definitions/issuedCapitalPrevious3Date"
+        },
+        "paidUpCapitalCurrency": {
+          "$ref": "#/definitions/paidUpCapitalCurrency"
+        },
+        "paidUpCapitalAmount": {
+          "$ref": "#/definitions/paidUpCapitalAmount"
+        },
+        "paidUpCapitalDate": {
+          "$ref": "#/definitions/paidUpCapitalDate"
+        },
+        "paidUpCapitalCashCurrency": {
+          "$ref": "#/definitions/paidUpCapitalCashCurrency"
+        },
+        "paidUpCapitalCashAmount": {
+          "$ref": "#/definitions/paidUpCapitalCashAmount"
+        },
+        "paidUpCapitalNoncashCurrency": {
+          "$ref": "#/definitions/paidUpCapitalNoncashCurrency"
+        },
+        "paidUpCapitalNoncashAmount": {
+          "$ref": "#/definitions/paidUpCapitalNoncashAmount"
+        },
+        "paidUpCapitalPrevious1Currency": {
+          "$ref": "#/definitions/paidUpCapitalPrevious1Currency"
+        },
+        "paidUpCapitalPrevious1Amount": {
+          "$ref": "#/definitions/paidUpCapitalPrevious1Amount"
+        },
+        "paidUpCapitalPrevious1Date": {
+          "$ref": "#/definitions/paidUpCapitalPrevious1Date"
+        },
+        "paidUpCapitalPrevious2Currency": {
+          "$ref": "#/definitions/paidUpCapitalPrevious2Currency"
+        },
+        "paidUpCapitalPrevious2Amount": {
+          "$ref": "#/definitions/paidUpCapitalPrevious2Amount"
+        },
+        "paidUpCapitalPrevious2Date": {
+          "$ref": "#/definitions/paidUpCapitalPrevious2Date"
+        },
+        "paidUpCapitalPrevious3Currency": {
+          "$ref": "#/definitions/paidUpCapitalPrevious3Currency"
+        },
+        "paidUpCapitalPrevious3Amount": {
+          "$ref": "#/definitions/paidUpCapitalPrevious3Amount"
+        },
+        "paidUpCapitalPrevious3Date": {
+          "$ref": "#/definitions/paidUpCapitalPrevious3Date"
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "required": [
+        "nominalCapitalCurrency",
+        "nominalCapitalShares1Class",
+        "nominalCapitalShares1ValuePerShareCurrency",
+        "nominalCapitalShares2Class",
+        "nominalCapitalShares2ValuePerShareCurrency",
+        "nominalCapitalShares3Class",
+        "nominalCapitalShares3ValuePerShareCurrency",
+        "nominalCapitalPrevious1Currency",
+        "nominalCapitalPrevious2Currency",
+        "nominalCapitalPrevious3Currency",
+        "issuedCapitalCurrency",
+        "issuedCapitalShares1Class",
+        "issuedCapitalShares1ValuePerShareCurrency",
+        "issuedCapitalShares2Class",
+        "issuedCapitalShares2ValuePerShareCurrency",
+        "issuedCapitalShares3Class",
+        "issuedCapitalShares3ValuePerShareCurrency",
+        "issuedCapitalPrevious1Currency",
+        "issuedCapitalPrevious2Currency",
+        "issuedCapitalPrevious3Currency",
+        "paidUpCapitalCurrency",
+        "paidUpCapitalCashCurrency",
+        "paidUpCapitalNoncashCurrency",
+        "paidUpCapitalPrevious1Currency",
+        "paidUpCapitalPrevious2Currency",
+        "paidUpCapitalPrevious3Currency"
+      ],
+      "additionalProperties": false
+    },
+    "nominalCapitalAmount": {
+      "type": "number",
+      "description": ""
+    },
+    "nominalCapitalCurrency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "nominalCapitalDate": {
+      "type": "number",
+      "description": ""
+    },
+    "nominalCapitalShares1Number": {
+      "type": "number",
+      "description": ""
+    },
+    "nominalCapitalShares1Class": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "nominalCapitalShares1ValuePerShareCurrency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "nominalCapitalShares1ValuePerShareAmount": {
+      "type": "number",
+      "description": ""
+    },
+    "nominalCapitalShares2Number": {
+      "type": "number",
+      "description": ""
+    },
+    "nominalCapitalShares2Class": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "nominalCapitalShares2ValuePerShareCurrency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "nominalCapitalShares2ValuePerShareAmount": {
+      "type": "number",
+      "description": ""
+    },
+    "nominalCapitalShares3Number": {
+      "type": "number",
+      "description": ""
+    },
+    "nominalCapitalShares3Class": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "nominalCapitalShares3ValuePerShareCurrency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "nominalCapitalShares3ValuePerShareAmount": {
+      "type": "number",
+      "description": ""
+    },
+    "nominalCapitalPrevious1Currency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "nominalCapitalPrevious1Amount": {
+      "type": "number",
+      "description": ""
+    },
+    "nominalCapitalPrevious1Date": {
+      "type": "number",
+      "description": ""
+    },
+    "nominalCapitalPrevious2Currency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "nominalCapitalPrevious2Amount": {
+      "type": "number",
+      "description": ""
+    },
+    "nominalCapitalPrevious2Date": {
+      "type": "number",
+      "description": ""
+    },
+    "nominalCapitalPrevious3Currency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "nominalCapitalPrevious3Amount": {
+      "type": "number",
+      "description": ""
+    },
+    "nominalCapitalPrevious3Date": {
+      "type": "number",
+      "description": ""
+    },
+    "issuedCapitalAmount": {
+      "type": "number",
+      "description": ""
+    },
+    "issuedCapitalCurrency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "issuedCapitalDate": {
+      "type": "number",
+      "description": ""
+    },
+    "issuedCapitalShares1Number": {
+      "type": "number",
+      "description": ""
+    },
+    "issuedCapitalShares1Class": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "issuedCapitalShares1ValuePerShareCurrency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "issuedCapitalShares1ValuePerShareAmount": {
+      "type": "number",
+      "description": ""
+    },
+    "issuedCapitalShares2Number": {
+      "type": "number",
+      "description": ""
+    },
+    "issuedCapitalShares2Class": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "issuedCapitalShares2ValuePerShareCurrency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "issuedCapitalShares2ValuePerShareAmount": {
+      "type": "number",
+      "description": ""
+    },
+    "issuedCapitalShares3Number": {
+      "type": "number",
+      "description": ""
+    },
+    "issuedCapitalShares3Class": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "issuedCapitalShares3ValuePerShareCurrency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "issuedCapitalShares3ValuePerShareAmount": {
+      "type": "number",
+      "description": ""
+    },
+    "issuedCapitalPrevious1Currency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "issuedCapitalPrevious1Amount": {
+      "type": "number",
+      "description": ""
+    },
+    "issuedCapitalPrevious1Date": {
+      "type": "number",
+      "description": ""
+    },
+    "issuedCapitalPrevious2Currency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "issuedCapitalPrevious2Amount": {
+      "type": "number",
+      "description": ""
+    },
+    "issuedCapitalPrevious2Date": {
+      "type": "number",
+      "description": ""
+    },
+    "issuedCapitalPrevious3Currency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "issuedCapitalPrevious3Amount": {
+      "type": "number",
+      "description": ""
+    },
+    "issuedCapitalPrevious3Date": {
+      "type": "number",
+      "description": ""
+    },
+    "paidUpCapitalCurrency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "paidUpCapitalAmount": {
+      "type": "number",
+      "description": ""
+    },
+    "paidUpCapitalDate": {
+      "type": "number",
+      "description": ""
+    },
+    "paidUpCapitalCashCurrency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "paidUpCapitalCashAmount": {
+      "type": "number",
+      "description": ""
+    },
+    "paidUpCapitalNoncashCurrency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "paidUpCapitalNoncashAmount": {
+      "type": "number",
+      "description": ""
+    },
+    "paidUpCapitalPrevious1Currency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "paidUpCapitalPrevious1Amount": {
+      "type": "number",
+      "description": ""
+    },
+    "paidUpCapitalPrevious1Date": {
+      "type": "number",
+      "description": ""
+    },
+    "paidUpCapitalPrevious2Currency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "paidUpCapitalPrevious2Amount": {
+      "type": "number",
+      "description": ""
+    },
+    "paidUpCapitalPrevious2Date": {
+      "type": "number",
+      "description": ""
+    },
+    "paidUpCapitalPrevious3Currency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "paidUpCapitalPrevious3Amount": {
+      "type": "number",
+      "description": ""
+    },
+    "paidUpCapitalPrevious3Date": {
+      "type": "number",
+      "description": ""
+    },
+    "motorVehicles": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "motorVehiclesList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/motorVehicle"
+          },
+          "additionalItems": false
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "motorVehicle": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "date": {
+          "$ref": "#/definitions/date"
+        },
+        "ownership": {
+          "$ref": "#/definitions/ownership"
+        },
+        "amount": {
+          "$ref": "#/definitions/amount"
+        }
+      },
+      "required": [
+        "type",
+        "ownership"
+      ],
+      "additionalProperties": false
+    },
+    "ownership": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "debtCollection": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "cases": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/case"
+          },
+          "additionalItems": false
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "case": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "invoiceDate": {
+          "$ref": "#/definitions/invoiceDate"
+        },
+        "amount": {
+          "$ref": "#/definitions/amount"
+        },
+        "currency": {
+          "$ref": "#/definitions/currency"
+        },
+        "caseStatus": {
+          "$ref": "#/definitions/caseStatus"
+        },
+        "caseCloseReason": {
+          "$ref": "#/definitions/caseCloseReason"
+        },
+        "receivedDate": {
+          "$ref": "#/definitions/receivedDate"
+        },
+        "creditor": {
+          "$ref": "#/definitions/creditor"
+        },
+        "informationSource": {
+          "$ref": "#/definitions/informationSource"
+        }
+      },
+      "required": [
+        "currency",
+        "caseStatus",
+        "caseCloseReason"
+      ],
+      "additionalProperties": false
+    },
+    "invoiceDate": {
+      "type": "number",
+      "description": ""
+    },
+    "caseStatus": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "date": {
+          "$ref": "#/definitions/date"
+        },
+        "value": {
+          "$ref": "#/definitions/value"
+        },
+        "name": {
+          "$ref": "#/definitions/name"
+        }
+      },
+      "additionalProperties": false
+    },
+    "caseCloseReason": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "$ref": "#/definitions/value"
+        },
+        "name": {
+          "$ref": "#/definitions/name"
+        }
+      },
+      "additionalProperties": false
+    },
+    "receivedDate": {
+      "type": "number",
+      "description": ""
+    },
+    "creditor": {
+      "type": "string",
+      "description": ""
+    },
+    "informationSource": {
+      "type": "string",
+      "description": ""
+    },
+    "audits": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "auditList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/audit"
+          }
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "audit": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "date": {
+          "$ref": "#/definitions/date"
+        },
+        "auditorPersonName": {
+          "$ref": "#/definitions/auditorPersonName"
+        },
+        "auditorCompanyName": {
+          "$ref": "#/definitions/auditorCompanyName"
+        },
+        "auditorCompanyAddress": {
+          "$ref": "#/definitions/auditorCompanyAddress"
+        },
+        "auditStatus": {
+          "$ref": "#/definitions/auditStatus"
+        }
+      },
+      "required": [
+        "auditorPersonName",
+        "auditorCompanyName",
+        "auditorCompanyAddress"
+      ],
+      "additionalProperties": false
+    },
+    "auditorPersonName": {
+      "type": "string",
+      "description": ""
+    },
+    "auditorCompanyName": {
+      "type": "string",
+      "description": ""
+    },
+    "auditorCompanyAddress": {
+      "type": "string",
+      "description": ""
+    },
+    "auditStatus": {
+      "type": "string",
+      "description": ""
+    },
+    "statusList": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "companyStatusList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/companyStatus"
+          },
+          "additionalItems": false
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "companyStatus": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "status": {
+          "$ref": "#/definitions/status"
+        },
+        "validSince": {
+          "$ref": "#/definitions/validSince"
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "required": [
+        "type",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "validSince": {
+      "type": "number",
+      "description": ""
+    },
+    "companyHistory": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "formerCompanyNames": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/formerCompanyName"
+          },
+          "additionalItems": false
+        },
+        "formerAddresses": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/formerAddress"
+          },
+          "additionalItems": false
+        },
+        "formerRegistrations": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/formerRegistration"
+          },
+          "additionalItems": false
+        },
+        "formerLegalForms": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/formerLegalForm"
+          },
+          "additionalItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "formerCompanyName": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "name": {
+          "$ref": "#/definitions/name"
+        },
+        "validSince": {
+          "$ref": "#/definitions/validSince"
+        },
+        "validUntil": {
+          "$ref": "#/definitions/validUntil"
+        }
+      },
+      "required": [
+        "name",
+        "validUntil"
+      ],
+      "additionalProperties": false
+    },
+    "formerAddress": {
+      "type": "object",
+      "description": "",
+      "allOf": [
+        {
+          "type": "object",
+          "properties": {
+            "validSince": {
+              "$ref": "#/definitions/validSince"
+            },
+            "validUntil": {
+              "$ref": "#/definitions/validUntil"
+            }
+          }
+        },
+        {
+          "$ref": "#/definitions/address"
+        }
+      ]
+    },
+    "formerRegistration": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "number": {
+          "$ref": "#/definitions/number"
+        },
+        "date": {
+          "$ref": "#/definitions/date"
+        },
+        "protocolPlace": {
+          "$ref": "#/definitions/protocolPlace"
+        }
+      },
+      "required": [
+        "number",
+        "protocolPlace"
+      ],
+      "additionalProperties": false
+    },
+    "formerLegalForm": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "legalForm": {
+          "$ref": "#/definitions/legalForm"
+        },
+        "validSince": {
+          "$ref": "#/definitions/validSince"
+        }
+      },
+      "required": [
+        "legalForm"
+      ],
+      "additionalProperties": false
+    },
+    "validUntil": {
+      "type": "string",
+      "description": ""
+    },
+    "protocolPlace": {
+      "type": "string",
+      "description": ""
+    },
+    "majorSuppliers": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/majorSupplier"
+      },
+      "additionalItems": false
+    },
+    "majorCustomers": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/majorCustomer"
+      },
+      "additionalItems": false
+    },
+    "majorSupplier": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "name": {
+          "$ref": "#/definitions/name"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "majorCustomer": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "name": {
+          "$ref": "#/definitions/name"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "branchRatios": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "ratios": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/ratio"
+          }
+        },
+        "nace": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "fromDate": {
+      "type": "number",
+      "description": ""
+    },
+    "toDate": {
+      "type": "number",
+      "description": ""
+    },
+    "additionalInsolvencies": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "additionalInsolvencyList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/additionalInsolvency"
+          },
+          "additionalItems": false
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "additionalInsolvency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "text": {
+          "$ref": "#/definitions/text"
+        },
+        "informationDate": {
+          "$ref": "#/definitions/informationDate"
+        },
+        "courtDecisionDate": {
+          "$ref": "#/definitions/courtDecisionDate"
+        },
+        "courtPublishDate": {
+          "$ref": "#/definitions/courtPublishDate"
+        },
+        "courtNumber": {
+          "$ref": "#/definitions/courtNumber"
+        },
+        "courtName": {
+          "$ref": "#/definitions/courtName"
+        },
+        "courtAddress": {
+          "$ref": "#/definitions/courtAddress"
+        },
+        "publicName": {
+          "$ref": "#/definitions/publicName"
+        },
+        "numberPublic": {
+          "$ref": "#/definitions/numberPublic"
+        },
+        "publicText": {
+          "$ref": "#/definitions/publicText"
+        },
+        "deadline": {
+          "$ref": "#/definitions/deadline"
+        },
+        "trusteeName": {
+          "$ref": "#/definitions/trusteeName"
+        },
+        "trusteeAddress": {
+          "$ref": "#/definitions/trusteeAddress"
+        }
+      },
+      "required": [
+        "text",
+        "courtNumber",
+        "courtName",
+        "courtAddress",
+        "publicName",
+        "numberPublic",
+        "publicText",
+        "deadline",
+        "trusteeName",
+        "trusteeAddress"
+      ],
+      "additionalProperties": false
+    },
+    "informationDate": {
+      "type": "number",
+      "description": ""
+    },
+    "courtDecisionDate": {
+      "type": "number",
+      "description": ""
+    },
+    "courtPublishDate": {
+      "type": "number",
+      "description": ""
+    },
+    "courtNumber": {
+      "type": "string",
+      "description": ""
+    },
+    "courtName": {
+      "type": "string",
+      "description": ""
+    },
+    "courtAddress": {
+      "type": "string",
+      "description": ""
+    },
+    "publicName": {
+      "type": "string",
+      "description": ""
+    },
+    "numberPublic": {
+      "type": "string",
+      "description": ""
+    },
+    "publicText": {
+      "type": "string",
+      "description": ""
+    },
+    "deadline": {
+      "type": "string",
+      "description": ""
+    },
+    "trusteeName": {
+      "type": "string",
+      "description": ""
+    },
+    "trusteeAddress": {
+      "type": "string",
+      "description": ""
+    },
+    "financials": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/indicator"
+      },
+      "additionalItems": false
+    },
+    "notification": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "company": {
+          "$ref": "#/definitions/company"
+        },
+        "changes": {
+          "$ref": "#/definitions/changes"
+        }
+      },
+      "required": [
+        "changes"
+      ],
+      "additionalProperties": false
+    },
+    "changes": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/change"
+      },
+      "additionalItems": false
+    },
+    "change": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "typeAdditionalInfo": {
+          "$ref": "#/definitions/typeAdditionalInfo"
+        },
+        "changeReason": {
+          "$ref": "#/definitions/changeReason"
+        },
+        "currentData": {
+          "$ref": "#/definitions/currentData"
+        },
+        "previousData": {
+          "$ref": "#/definitions/previousData"
+        },
+        "deletedData": {
+          "$ref": "#/definitions/deletedData"
+        },
+        "addresses": {
+          "$ref": "#/definitions/changeList"
+        },
+        "bankAccounts": {
+          "$ref": "#/definitions/changeList"
+        },
+        "previousDataText": {
+       	  "$ref": "#/definitions/previousDataText"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "previousDataText": {
+    	"type": "string",
+    	"description": ""
+    },
+    "changeList": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "type": "object",
+        "properties": {
+          "currentData": {
+            "$ref": "#/definitions/currentData"
+          },
+          "previousData": {
+            "$ref": "#/definitions/previousData"
+          }
+        },
+        "additionalProperties": false
+      },
+      "additionalItems": false
+    },
+    "currentData": {
+      "type": "array",
+      "description": "",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "assessment": {
+              "allOf": [
+                {
+                  "$ref": "#/definitions/solvency"
+                },
+                {
+                  "properties": {
+                    "comment": {
+                      "$ref": "#/definitions/comment"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "cceatRating": {
+              "$ref": "#/definitions/cceatRating"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "insolvency": {
+              "$ref": "#/definitions/insolvency"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "payments": {
+              "$ref": "#/definitions/payments"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "legalForm": {
+              "$ref": "#/definitions/legalForm"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "companyName": {
+              "$ref": "#/definitions/companyName"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "activity": {
+              "$ref": "#/definitions/activity"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "address": {
+              "$ref": "#/definitions/address"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "manager": {
+              "$ref": "#/definitions/manager"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "shareholder": {
+              "$ref": "#/definitions/shareholder"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "case": {
+              "$ref": "#/definitions/case"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "linkedCompany": {
+              "$ref": "#/definitions/linkedCompany"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "indicator": {
+              "$ref": "#/definitions/indicator"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "balanceSheet": {
+              "$ref": "#/definitions/balanceSheet"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "bankConnection": {
+              "$ref": "#/definitions/bankConnection"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "bankConfirmation": {
+              "$ref": "#/definitions/bankConfirmation"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "companyStatus": {
+              "$ref": "#/definitions/companyStatus"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "customerSpecificMaxCredit": {
+              "$ref": "#/definitions/customerSpecificMaxCredit"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "calculatedKeyData": {
+              "$ref": "#/definitions/calculatedKeyDataItem"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "shareCapital": {
+              "$ref": "#/definitions/shareCapital"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "additionalInformationItem": {
+              "$ref": "#/definitions/additionalInformationItem"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "dclInsurance": {
+              "$ref": "#/definitions/dclInsurance"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "paymentIndex": {
+              "$ref": "#/definitions/paymentIndex"
+            }
+          }
+        }
+      ]
+    },
+    "previousData": {
+      "type": "array",
+      "description": "",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "assessment": {
+              "$ref": "#/definitions/solvency"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "cceatRating": {
+              "$ref": "#/definitions/cceatRating"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "insolvency": {
+              "$ref": "#/definitions/insolvency"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "payments": {
+              "$ref": "#/definitions/payments"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "legalForm": {
+              "$ref": "#/definitions/legalForm"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "companyName": {
+              "$ref": "#/definitions/companyName"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "activity": {
+              "$ref": "#/definitions/activity"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "address": {
+              "$ref": "#/definitions/address"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "manager": {
+              "$ref": "#/definitions/manager"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "shareholder": {
+              "$ref": "#/definitions/shareholder"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "case": {
+              "$ref": "#/definitions/case"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "linkedCompany": {
+              "$ref": "#/definitions/linkedCompany"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "indicator": {
+              "$ref": "#/definitions/indicator"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "bankConnection": {
+              "$ref": "#/definitions/bankConnection"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "companyStatus": {
+              "$ref": "#/definitions/companyStatus"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "customerSpecificMaxCredit": {
+              "$ref": "#/definitions/customerSpecificMaxCredit"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "calculatedKeyData": {
+              "$ref": "#/definitions/calculatedKeyDataItem"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "shareCapital": {
+              "$ref": "#/definitions/shareCapital"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "additionalInformationItem": {
+              "$ref": "#/definitions/additionalInformationItem"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "dclInsurance": {
+              "$ref": "#/definitions/dclInsurance"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "paymentIndex": {
+              "$ref": "#/definitions/paymentIndex"
+            }
+          }
+        }
+      ]
+    },
+    "typeAdditionalInfo": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "deletedData": {
+      "type": "array",
+      "description": "",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "address": {
+              "$ref": "#/definitions/address"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "case": {
+              "$ref": "#/definitions/case"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "bankConnection": {
+              "$ref": "#/definitions/bankConnection"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "bankConfirmation": {
+              "$ref": "#/definitions/bankConfirmation"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "additionalInformationItem": {
+              "$ref": "#/definitions/additionalInformationItem"
+            }
+          }
+        }
+      ]
+    },
+    "scoringElements": {
+      "type": "string",
+      "description": ""
+    },
+    "changeReason": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "unratedReason": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "cceatRating": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "score": {
+          "$ref": "#/definitions/score"
+        },
+        "trend": {
+          "$ref": "#/definitions/trend"
+        },
+        "date": {
+          "$ref": "#/definitions/date"
+        },
+        "pd": {
+          "$ref": "#/definitions/pd"
+        },
+        "softPd": {
+          "$ref": "#/definitions/softPd"
+        },
+        "finPd": {
+          "$ref": "#/definitions/finPd"
+        },
+        "threeDigitScore": {
+          "$ref": "#/definitions/threeDigitScore"
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        },
+        "unratedReason": {
+          "$ref": "#/definitions/unratedReason"
+        },
+        "contribution": {
+          "$ref": "#/definitions/contribution"
+        }
+      },
+      "required": [
+        "score"
+      ],
+      "additionalProperties": false
+    },
+    "contribution": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/factor"
+      },
+      "additionalItems": false
+    },
+    "factor": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "name": {
+          "$ref": "#/definitions/name"
+        },
+        "direction": {
+          "$ref": "#/definitions/direction"
+        }
+      },
+      "required": [
+        "name",
+        "direction"
+      ],
+      "additionalProperties": false
+    },
+    "direction": {
+      "type": "string",
+      "description": ""
+    },
+    "pd": {
+      "type": "number",
+      "description": ""
+    },
+    "softPd": {
+      "type": "number",
+      "description": ""
+    },
+    "finPd": {
+      "type": "number",
+      "description": ""
+    },
+    "historicalcceATRatings": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/historicalcceATRating"
+      },
+      "additionalItems": false
+    },
+    "historicalcceATRating": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "score": {
+          "$ref": "#/definitions/score"
+        },
+        "sectorScore": {
+          "$ref": "#/definitions/sectorScore"
+        },
+        "date": {
+          "$ref": "#/definitions/date"
+        }
+      },
+      "required": [
+        "score"
+      ],
+      "additionalProperties": false
+    },
+    "score": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "ratingTexts": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "ratingTextCompanySize": {
+          "$ref": "#/definitions/ratingTextCompanySize"
+        },
+        "ratingTextTurnover": {
+          "$ref": "#/definitions/ratingTextTurnover"
+        },
+        "ratingTextFixedAssets": {
+          "$ref": "#/definitions/ratingTextFixedAssets"
+        },
+        "ratingTextWorkingCapital": {
+          "$ref": "#/definitions/ratingTextWorkingCapital"
+        },
+        "ratingTextCashFlow": {
+          "$ref": "#/definitions/ratingTextCashFlow"
+        },
+        "ratingTextEquityRatio": {
+          "$ref": "#/definitions/ratingTextEquityRatio"
+        },
+        "ratingTextLastLegalProceedings": {
+          "$ref": "#/definitions/ratingTextLastLegalProceedings"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ratingTextCompanySize": {
+      "type": "string",
+      "description": ""
+    },
+    "ratingTextTurnover": {
+      "type": "string",
+      "description": ""
+    },
+    "ratingTextFixedAssets": {
+      "type": "string",
+      "description": ""
+    },
+    "ratingTextWorkingCapital": {
+      "type": "string",
+      "description": ""
+    },
+    "ratingTextCashFlow": {
+      "type": "string",
+      "description": ""
+    },
+    "ratingTextEquityRatio": {
+      "type": "string",
+      "description": ""
+    },
+    "ratingTextLastLegalProceedings": {
+      "type": "string",
+      "description": ""
+    },
+    "trend": {
+      "type": "string",
+      "description": ""
+    },
+    "eurogateRiskClass": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "paymentReferences": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "paymentReferencesList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/paymentReference"
+          }
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "paymentReference": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "date": {
+          "$ref": "#/definitions/date"
+        },
+        "sourceName": {
+          "$ref": "#/definitions/sourceName"
+        },
+        "knownSince": {
+          "$ref": "#/definitions/knownSince"
+        },
+        "paymentTermsText": {
+          "$ref": "#/definitions/paymentTermsText"
+        },
+        "paymentConditions": {
+          "$ref": "#/definitions/paymentConditions"
+        },
+        "paymentExperience": {
+          "$ref": "#/definitions/paymentExperience"
+        },
+        "paymentReferenceMaximumCredit": {
+          "$ref": "#/definitions/paymentReferenceMaximumCredit"
+        },
+        "notes": {
+          "$ref": "#/definitions/notes"
+        }
+      },
+      "additionalProperties": false
+    },
+    "sourceName": {
+      "type": "string",
+      "description": ""
+    },
+    "knownSince": {
+      "type": "string",
+      "description": ""
+    },
+    "paymentTermsText": {
+      "type": "string",
+      "description": ""
+    },
+    "paymentConditions": {
+      "type": "string",
+      "description": ""
+    },
+    "paymentExperience": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "paymentReferenceMaximumCredit": {
+      "type": "string",
+      "description": ""
+    },
+    "notes": {
+      "type": "string",
+      "description": ""
+    },
+    "daysPayableOutstanding": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "daysFrom": {
+          "$ref": "#/definitions/daysFrom"
+        },
+        "daysTo": {
+          "$ref": "#/definitions/daysTo"
+        }
+      },
+      "required": [
+        "daysFrom",
+        "daysTo"
+      ],
+      "additionalProperties": false
+    },
+    "daysFrom": {
+      "type": "string",
+      "description": ""
+    },
+    "daysTo": {
+      "type": "string",
+      "description": ""
+    },
+    "litigations": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "litigationList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/litigation"
+          }
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "litigation": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "claimAmount": {
+          "$ref": "#/definitions/claimAmount"
+        },
+        "claimAmountCurrency": {
+          "$ref": "#/definitions/claimAmountCurrency"
+        },
+        "dateOfWrit": {
+          "$ref": "#/definitions/dateOfWrit"
+        },
+        "actionNumber": {
+          "$ref": "#/definitions/actionNumber"
+        },
+        "caseId": {
+          "$ref": "#/definitions/caseId"
+        },
+        "defendant": {
+          "$ref": "#/definitions/defendant"
+        },
+        "plaintiff": {
+          "$ref": "#/definitions/plaintiff"
+        },
+        "cause": {
+          "$ref": "#/definitions/cause"
+        },
+        "details": {
+          "$ref": "#/definitions/details"
+        },
+        "companyIsPlaintiff": {
+          "$ref": "#/definitions/companyIsPlaintiff"
+        },
+        "numberOfParticipants": {
+          "$ref": "#/definitions/numberOfParticipants"
+        },
+        "status": {
+          "$ref": "#/definitions/status"
+        }
+      },
+      "required": [
+        "cause"
+      ],
+      "additionalProperties": false
+    },
+    "claimAmount": {
+      "type": "number",
+      "description": ""
+    },
+    "claimAmountCurrency": {
+      "type": "string",
+      "description": ""
+    },
+    "dateOfWrit": {
+      "type": "number",
+      "description": ""
+    },
+    "actionNumber": {
+      "type": "string",
+      "description": ""
+    },
+    "caseId": {
+      "type": "string",
+      "description": ""
+    },
+    "defendant": {
+      "type": "string",
+      "description": ""
+    },
+    "plaintiff": {
+      "type": "string",
+      "description": ""
+    },
+    "cause": {
+      "type": "string",
+      "description": ""
+    },
+    "details": {
+      "type": "string",
+      "description": ""
+    },
+    "companyIsPlaintiff": {
+      "type": "string",
+      "description": ""
+    },
+    "numberOfParticipants": {
+      "type": "string",
+      "description": ""
+    },
+    "litigationSummaries": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "litigationSummaryList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/litigationSummary"
+          },
+          "additionalItems": false
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "litigationSummary": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "companyIsPlaintiff": {
+          "$ref": "#/definitions/companyIsPlaintiff"
+        },
+        "period": {
+          "$ref": "#/definitions/period"
+        },
+        "number": {
+          "$ref": "#/definitions/number"
+        },
+        "currencyAmounts": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/currencyAmount"
+          },
+          "additionalItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "currencyAmount": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "amount": {
+          "$ref": "#/definitions/amount"
+        },
+        "currency": {
+          "$ref": "#/definitions/currency"
+        }
+      },
+      "required": [
+        "currency"
+      ],
+      "additionalProperties": false
+    },
+    "period": {
+      "type": "string",
+      "description": ""
+    },
+    "natureOfBusiness": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/nodeNatureOfBusiness"
+      },
+      "additionalItems": false
+    },
+    "nodeNatureOfBusiness": {
+      "type": "object",
+      "description": "",
+      "properties": {
+      	"nodeNatureOfBusiness": {
+      		"type": "string"
+      	}
+      },
+      "additionalProperties": false
+    },
+    "charges": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "chargeSummaryType": {
+          "$ref": "#/definitions/chargeSummaryType"
+        },
+        "charges": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/charge"
+          },
+          "additionalItems": false
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "required": [
+        "chargeSummaryType"
+      ],
+      "additionalProperties": false
+    },
+    "chargeSummaryType": {
+      "type": "string",
+      "description": ""
+    },
+    "charge": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "date": {
+          "$ref": "#/definitions/date"
+        },
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "description": {
+          "$ref": "#/definitions/description"
+        },
+        "amount": {
+          "$ref": "#/definitions/amount"
+        },
+        "amounttype": {
+          "$ref": "#/definitions/amounttype"
+        },
+        "amounttext": {
+          "$ref": "#/definitions/amounttext"
+        },
+        "chargeCurrency": {
+          "$ref": "#/definitions/chargeCurrency"
+        },
+        "chargeInFavorOf": {
+          "$ref": "#/definitions/chargeInFavorOf"
+        },
+        "chargeAgainst": {
+          "$ref": "#/definitions/chargeAgainst"
+        },
+        "dischargeDate": {
+          "$ref": "#/definitions/dischargeDate"
+        },
+        "dischargeType": {
+          "$ref": "#/definitions/dischargeType"
+        },
+        "dischargeText": {
+          "$ref": "#/definitions/dischargeText"
+        }
+      },
+      "required": [
+        "type",
+        "description",
+        "amounttype",
+        "amounttext",
+        "chargeCurrency",
+        "chargeInFavorOf",
+        "chargeAgainst",
+        "dischargeType",
+        "dischargeText"
+      ],
+      "additionalProperties": false
+    },
+    "amounttype": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "amounttext": {
+      "type": "string",
+      "description": ""
+    },
+    "chargeCurrency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "chargeInFavorOf": {
+      "type": "string",
+      "description": ""
+    },
+    "chargeAgainst": {
+      "type": "string",
+      "description": ""
+    },
+    "dischargeDate": {
+      "type": "number",
+      "description": ""
+    },
+    "dischargeType": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "dischargeText": {
+      "type": "string",
+      "description": ""
+    },
+    "creditRequested": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "amount": {
+          "$ref": "#/definitions/amount"
+        },
+        "currency": {
+          "$ref": "#/definitions/currency"
+        }
+      },
+      "additionalProperties": false
+    },
+    "profitability": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "solvencyList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/solvency"
+          },
+          "additionalItems": false
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "statusOfCompany": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "solvencyList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/solvency"
+          },
+          "additionalItems": false
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "financialSituation": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "solvencyList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/solvency"
+          },
+          "additionalItems": false
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "contactInformations": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/contactInformation"
+      },
+      "additionalItems": false
+    },
+    "contactInformation": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "internationalCode": {
+          "$ref": "#/definitions/internationalCode"
+        },
+        "areaCode": {
+          "$ref": "#/definitions/areaCode"
+        },
+        "number": {
+          "$ref": "#/definitions/number"
+        },
+        "email": {
+          "$ref": "#/definitions/email"
+        },
+        "descriptionType": {
+          "$ref": "#/definitions/descriptionType"
+        },
+        "description": {
+          "$ref": "#/definitions/description"
+        }
+      },
+      "required": [
+        "type",
+        "internationalCode",
+        "areaCode",
+        "number",
+        "email",
+        "descriptionType",
+        "description"
+      ],
+      "additionalProperties": false
+    },
+    "internationalCode": {
+      "type": "string",
+      "description": ""
+    },
+    "areaCode": {
+      "type": "string",
+      "description": ""
+    },
+    "descriptionType": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "executions": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "executionList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/execution"
+          }
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "execution": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "executionDate": {
+          "$ref": "#/definitions/executionDate"
+        },
+        "executionAmount": {
+          "$ref": "#/definitions/executionAmount"
+        },
+        "executionCurrency": {
+          "$ref": "#/definitions/executionCurrency"
+        },
+        "executorName": {
+          "$ref": "#/definitions/executorName"
+        },
+        "executionStatus": {
+          "$ref": "#/definitions/executionStatus"
+        }
+      },
+      "additionalProperties": false
+    },
+    "executionDate": {
+      "type": "number",
+      "description": ""
+    },
+    "executionAmount": {
+      "type": "number",
+      "description": ""
+    },
+    "executionCurrency": {
+      "type": "string",
+      "description": ""
+    },
+    "executorName": {
+      "type": "string",
+      "description": ""
+    },
+    "executionStatus": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "financialSources": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/financialSource"
+      },
+      "additionalItems": false
+    },
+    "financialSource": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "sourceType": {
+          "$ref": "#/definitions/sourceType"
+        },
+        "date": {
+          "$ref": "#/definitions/date"
+        }
+      },
+      "required": [
+        "sourceType"
+      ],
+      "additionalProperties": false
+    },
+    "sourceType": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "bankConfirmations": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/bankConfirmation"
+      },
+      "additionalItems": false
+    },
+    "bankConfirmation": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "confirmationCurrent": {
+          "$ref": "#/definitions/confirmation"
+        },
+        "confirmationHistory": {
+          "$ref": "#/definitions/confirmationHistory"
+        }
+      },
+      "additionalProperties": false
+    },
+    "confirmationHistory": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/confirmation"
+      },
+      "additionalItems": false
+    },
+    "confirmation": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "bank": {
+          "$ref": "#/definitions/bank"
+        },
+        "accountNumber": {
+          "$ref": "#/definitions/accountNumber"
+        },
+        "bankConfirmationDate": {
+          "$ref": "#/definitions/bankConfirmationDate"
+        },
+        "bankAccountBalance": {
+          "$ref": "#/definitions/bankAccountBalance"
+        },
+        "bankAccountBalanceCurrency": {
+          "$ref": "#/definitions/bankAccountBalanceCurrency"
+        },
+        "totalAccessioninLast30Days": {
+          "$ref": "#/definitions/totalAccessioninLast30Days"
+        },
+        "totalAccessioninLast30DaysCurrency": {
+          "$ref": "#/definitions/totalAccessioninLast30DaysCurrency"
+        },
+        "averageBalanceInLast30Days": {
+          "$ref": "#/definitions/averageBalanceInLast30Days"
+        },
+        "averageBalanceInLast30DaysCurrency": {
+          "$ref": "#/definitions/averageBalanceInLast30DaysCurrency"
+        },
+        "amountOfApprovedCredit": {
+          "$ref": "#/definitions/amountOfApprovedCredit"
+        },
+        "amountOfApprovedCreditCurrency": {
+          "$ref": "#/definitions/amountOfApprovedCreditCurrency"
+        },
+        "accountPermanentlyBlockedFromDayOfIssuingThisReport": {
+          "$ref": "#/definitions/accountPermanentlyBlockedFromDayOfIssuingThisReport"
+        },
+        "accountTemporarilyBlocked": {
+          "$ref": "#/definitions/accountTemporarilyBlocked"
+        },
+        "numberOfDaysAccountBlockedInLast180Days": {
+          "$ref": "#/definitions/numberOfDaysAccountBlockedInLast180Days"
+        },
+        "blockedAmount": {
+          "$ref": "#/definitions/blockedAmount"
+        },
+        "blockedAmountCurrency": {
+          "$ref": "#/definitions/blockedAmountCurrency"
+        },
+        "accountClosureDate": {
+          "$ref": "#/definitions/accountClosureDate"
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "required": [
+        "bank",
+        "accountNumber",
+        "bankConfirmationDate",
+        "accountTemporarilyBlocked"
+      ],
+      "additionalProperties": false
+    },
+    "bankConfirmationDate": {
+      "type": "number",
+      "description": ""
+    },
+    "bankAccountBalance": {
+      "type": "number",
+      "description": ""
+    },
+    "bankAccountBalanceCurrency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "totalAccessioninLast30Days": {
+      "type": "number",
+      "description": ""
+    },
+    "totalAccessioninLast30DaysCurrency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "averageBalanceInLast30Days": {
+      "type": "number",
+      "description": ""
+    },
+    "averageBalanceInLast30DaysCurrency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "amountOfApprovedCredit": {
+      "type": "number",
+      "description": ""
+    },
+    "amountOfApprovedCreditCurrency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "accountPermanentlyBlockedFromDayOfIssuingThisReport": {
+      "type": "number",
+      "description": ""
+    },
+    "accountTemporarilyBlocked": {
+      "type": "string",
+      "description": ""
+    },
+    "numberOfDaysAccountBlockedInLast180Days": {
+      "type": "number",
+      "description": ""
+    },
+    "blockedAmount": {
+      "type": "number",
+      "description": ""
+    },
+    "blockedAmountCurrency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "accountClosureDate": {
+      "type": "number",
+      "description": ""
+    },
+    "authority": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "authorityTypes": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/authorityType"
+          }
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "authorityType": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "negativeInformation": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "countryIndicators": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/countryIndicator"
+      },
+      "additionalItems": false
+    },
+    "countryIndicator": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "date": {
+          "$ref": "#/definitions/date"
+        },
+        "country": {
+          "$ref": "#/definitions/country"
+        },
+        "naceGroup": {
+          "$ref": "#/definitions/naceGroup"
+        },
+        "indicatorValue": {
+          "$ref": "#/definitions/indicatorValue"
+        }
+      },
+      "required": [
+        "type",
+        "indicatorValue"
+      ],
+      "additionalProperties": false
+    },
+    "naceGroup": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "indicatorValue": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": ""
+        },
+        "indicatorValue": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "additionalBalanceSheets": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/additionalBalanceSheet"
+      },
+      "additionalItems": false
+    },
+    "additionalBalanceSheet": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "balanceSheetItems": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/balanceSheetItem"
+          }
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        },
+        "type": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "additionalTextInformations": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/additionalTextInformation"
+      },
+      "additionalItems": false
+    },
+    "additionalTextInformation": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "text": {
+          "$ref": "#/definitions/text"
+        }
+      },
+      "required": [
+        "type",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "externalDebts": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/externalDebt"
+      },
+      "additionalItems": false
+    },
+    "externalDebt": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "fromDate": {
+          "$ref": "#/definitions/fromDate"
+        },
+        "toDate": {
+          "$ref": "#/definitions/toDate"
+        },
+        "amount": {
+          "$ref": "#/definitions/amount"
+        },
+        "currency": {
+          "$ref": "#/definitions/currency"
+        }
+      },
+      "required": [
+        "type",
+        "currency"
+      ],
+      "additionalProperties": false
+    },
+    "generalPaymentTerms1": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "generalPaymentTerms2": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "generalPaymentTerms3": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "generalPaymentTerms4": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "generalPaymentTerms5": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "generalPaymentDays1": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "generalPaymentDays2": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "generalPaymentDays3": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "generalPaymentDays4": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "generalPaymentDays5": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "paymentTerms1": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "paymentDays1": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "paymentTermsText1": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "termsQualifier1": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "paymentTerms2": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "paymentDays2": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "paymentTermsText2": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "termsQualifier2": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "paymentTerms3": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "paymentDays3": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "paymentTermsText3": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "termsQualifier3": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "paymentTerms4": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "paymentDays4": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "paymentTermsText4": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "termsQualifier4": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "paymentTerms5": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "paymentDays5": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "paymentTermsText5": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "termsQualifier5": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "retail": {
+      "type": "string",
+      "description": ""
+    },
+    "paymentMoralityIndex": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "pmi": {
+          "$ref": "#/definitions/pmi"
+        },
+        "description": {
+          "$ref": "#/definitions/description"
+        },
+        "date": {
+          "$ref": "#/definitions/date"
+        }
+      },
+      "required": [
+        "pmi",
+        "description"
+      ],
+      "additionalProperties": false
+    },
+    "paymentMoralityIndexHistory": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/paymentMoralityIndex"
+      },
+      "additionalItems": false
+    },
+    "pmi": {
+      "type": "string",
+      "description": ""
+    },
+    "balanceSheetPublications": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/balanceSheetPublication"
+      },
+      "additionalItems": false
+    },
+    "balanceSheetPublication": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "balanceSheetFromDate": {
+          "$ref": "#/definitions/balanceSheetFromDate"
+        },
+        "balanceSheetToDate": {
+          "$ref": "#/definitions/balanceSheetToDate"
+        },
+        "filedOnDate": {
+          "$ref": "#/definitions/filedOnDate"
+        }
+      },
+      "required": [
+        "balanceSheetToDate",
+        "filedOnDate"
+      ],
+      "additionalProperties": false
+    },
+    "balanceSheetFromDate": {
+      "type": "number",
+      "description": ""
+    },
+    "balanceSheetToDate": {
+      "type": "number",
+      "description": ""
+    },
+    "filedOnDate": {
+      "type": "number",
+      "description": ""
+    },
+    "familyTree": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "node": {
+          "$ref": "#/definitions/node"
+        },
+        "parents": {
+          "$ref": "#/definitions/parents"
+        },
+        "children": {
+          "$ref": "#/definitions/children"
+        }
+      },
+      "required": [
+        "node"
+      ],
+      "additionalProperties": false
+    },
+    "children": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/child"
+      },
+      "additionalItems": false
+    },
+    "child": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "node": {
+          "$ref": "#/definitions/node"
+        },
+        "children": {
+          "$ref": "#/definitions/children"
+        },
+        "type": {
+          "$ref": "#/definitions/type"
+        }
+      },
+      "required": [
+        "node"
+      ],
+      "additionalProperties": false
+    },
+    "parents": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$ref": "#/definitions/parent"
+      },
+      "additionalItems": false
+    },
+    "parent": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "node": {
+          "$ref": "#/definitions/node"
+        },
+        "children": {
+          "$ref": "#/definitions/children"
+        },
+        "type": {
+          "$ref": "#/definitions/type"
+        }
+      },
+      "required": [
+        "node"
+      ],
+      "additionalProperties": false
+    },
+    "node": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "name": {
+          "$ref": "#/definitions/name"
+        },
+        "country": {
+          "$ref": "#/definitions/country"
+        },
+        "level": {
+          "type": "string",
+          "description": ""
+        },
+        "shares": {
+          "type": "string",
+          "description": ""
+        },
+        "type": {
+          "type": "string",
+          "description": ""
+        },
+        "nationalId": {
+          "type": "string",
+          "description": ""
+        },
+        "vatNumber": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "tradeSuppliers": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "tradeSuppliersList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/supplier"
+          },
+          "additionalItems": false
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "tradeSuppliersList"
+      ]
+    },
+    "supplier": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": ""
+        },
+        "note": {
+          "type": "string",
+          "description": ""
+        },
+        "countries": {
+          "type": "string",
+          "description": ""
+        },
+        "products": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "note",
+        "countries",
+        "products"
+      ]
+    },
+    "agencies": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "agencyList": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/agency"
+          },
+          "additionalItems": false
+        },
+        "comment": {
+          "$ref": "#/definitions/comment"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "agencyList"
+      ]
+    },
+    "agency": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "agency": {
+          "$ref": "#/definitions/supplier"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "agency"
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "icon": {
+      "$ref": "#/definitions/icon"
+    }
+  },
+  "additionalProperties": false
+}
