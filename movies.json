@@ -1,0 +1,132 @@
+{
+   "id":"MV.12345",
+   "name":"Movies list",
+   "movies":[
+      {
+         "title":"The Shawshank Redemption",
+         "cast":[
+            {
+               "name":"Tim Robbins",
+               "character":"Andy Dufresne"
+            },
+            {
+               "name":"Morgan Freeman",
+               "character":"Ellis Boyd 'Red' Redding",
+               "films":[
+                  {
+                     "title":"The Dark Knight",
+                     "role":"Lucious Fox"
+                  },
+                  {
+                     "title":"Going In Style",
+                     "role":"Joe"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "title":"The Godfather",
+         "cast":[
+            {
+               "name":"Marlon Brando",
+               "character":"Don Vito Corleone",
+               "films":[
+                  {
+                     "title":"A Streetcar Named Desire",
+                     "role":"Stanley Kowalski"
+                  },
+                  {
+                     "title":"Apocalypse Now",
+                     "role":"Colonel Walter E. Kurtz"
+                  }
+               ]
+            },
+            {
+               "name":"Al Pacino",
+               "character":"Michael Corleone",
+               "films":[
+                  {
+                     "title":"Serpico",
+                     "role":"Frank Serpico"
+                  },
+                  {
+                     "title":"Dog Day Afternoon",
+                     "role":"Sonny Wortzik"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "title":"The Godfather: Part II",
+         "cast":[
+            {
+               "name":"Al Pacino",
+               "character":"Michael Corleone",
+               "films":[
+                  {
+                     "title":"Serpico",
+                     "role":"Frank Serpico"
+                  },
+                  {
+                     "title":"Dog Day Afternoon",
+                     "role":"Sonny Wortzik"
+                  }
+               ]
+            },
+            {
+               "name":"Robert De Niro",
+               "character":"Young Vito Corleone",
+               "films":[
+                  {
+                     "title":"Taxi Driver",
+                     "role":"Travis Bickle"
+                  },
+                  {
+                     "title":"Raging Bull",
+                     "role":"Jake LaMotta"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "title":"The Dark Knight",
+         "cast":[
+            {
+               "name":"Christian Bale",
+               "character":"Bruce Wayne/Batman",
+               "films":[
+                  {
+                     "title":"American Psycho",
+                     "role":"Patrick Bateman"
+                  },
+                  {
+                     "title":"The Prestige",
+                     "role":"Alfred Borden"
+                  }
+               ]
+            },
+            {
+               "name":"Heath Ledger",
+               "character":"The Joker",
+               "films":[
+                  {
+                     "title":"Brokeback Mountain",
+                     "role":"Ennis Del Mar"
+                  },
+                  {
+                     "title":"The Imaginarium of Doctor Parnassus",
+                     "role":"Ennis Del Mar"
+                  },
+                  {
+                     "title":"The Imaginarium of Doctor Parnassus",
+                     "role":"Tony"
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}
