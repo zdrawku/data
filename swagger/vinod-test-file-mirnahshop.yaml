@@ -1,0 +1,763 @@
+openapi: 3.0.0
+info:
+  title: CRM Mirnah
+  version: 1.0.0
+servers:
+  - url: http://mirnahshop.com
+  - url: http://localhost.com
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+paths:
+  /ecom/crm/v2/crm/public/api/data/country:
+    get:
+      tags:
+        - default
+      summary: Project
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/customerlist:
+    get:
+      tags:
+        - default
+      summary: Customer list
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/data/city:
+    get:
+      tags:
+        - default
+      summary: Get city
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/datalist/projectList/:
+    get:
+      tags:
+        - default
+      summary: Get projects
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/datalist/cityList/:
+    get:
+      tags:
+        - default
+      summary: City List
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/datalist/projectByCustomer/3:
+    get:
+      tags:
+        - default
+      summary: Get project By Customerid
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /crm/public/api/data/task_log:
+    get:
+      tags:
+        - default
+      summary: Get Activityhistory
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/data/task_type:
+    get:
+      tags:
+        - default
+      summary: Get activity Type
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/tasks/2:
+    get:
+      tags:
+        - default
+      summary: Get Activity list
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/taskbyid/2:
+    get:
+      tags:
+        - default
+      summary: Activity Details
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/dataDel/city/{id}/CityId:
+    get:
+      tags:
+        - default
+      summary: Delete City
+      security:
+        - basicAuth: []
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/dataDel/country/6/CountryId:
+    get:
+      tags:
+        - default
+      summary: Delete Country
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/dataDel/project/2/ProjectId:
+    get:
+      tags:
+        - default
+      summary: Delete Project
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/dataDel/task_type/2/TaskTypeId:
+    get:
+      tags:
+        - default
+      summary: Delete Task Type
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/public/api/dataDel/users/16/userId:
+    get:
+      tags:
+        - default
+      summary: Delete User
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/dataDel/:
+    post:
+      tags:
+        - default
+      summary: Delete Customer
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                col:
+                  type: string
+                  example: CustomerId
+                id:
+                  type: integer
+                  example: '24'
+                type:
+                  type: string
+                  example: customers
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/user/login:
+    post:
+      tags:
+        - default
+      summary: Login Auth
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                password:
+                  type: integer
+                  example: '123456'
+                username:
+                  type: string
+                  example: d@g.com
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/user/add:
+    post:
+      tags:
+        - default
+      summary: Create Users
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Sales Manager
+                username:
+                  type: string
+                  example: s@mirnah.com
+                password:
+                  type: integer
+                  example: '12345'
+                type:
+                  type: integer
+                  description: 1= Super admin 2= supervisor 3= user
+                  example: '2'
+                reportto:
+                  type: integer
+                  description: reporting to which user id has to mention
+                  example: '1'
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/user/update:
+    post:
+      tags:
+        - default
+      summary: Update Users
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: integer
+                  example: '111'
+                username:
+                  type: string
+                  example: d@g.cov
+                password:
+                  type: integer
+                  example: '123456'
+                reportto:
+                  type: integer
+                  description: 1= Super admin 2= supervisor 3= user
+                  example: '2'
+                userId:
+                  type: integer
+                  description: Reporting to which user id has to mention
+                  example: '4'
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/customer/add:
+    post:
+      tags:
+        - default
+      summary: Create Customer
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                customerName:
+                  type: string
+                  example: PBIC
+                countryId:
+                  type: integer
+                  example: '1'
+                cityId:
+                  type: integer
+                  example: '1'
+                email:
+                  type: string
+                  example: pbc@gmail.com
+                mobile:
+                  type: integer
+                  example: '500864235'
+                contactPerson:
+                  type: string
+                  example: Jhone
+                companyTypeId:
+                  type: integer
+                  example: '1'
+                userid:
+                  type: integer
+                  example: '2'
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/customer/update:
+    post:
+      tags:
+        - default
+      summary: Update Customer
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                customerName:
+                  type: string
+                  example: Golden Chicken
+                countryId:
+                  type: integer
+                  example: '3'
+                cityId:
+                  type: integer
+                  example: '8'
+                email:
+                  type: string
+                  example: msalahudeen@goldenchicken.com.sa
+                mobile:
+                  type: integer
+                  example: '0563438311'
+                contactPerson:
+                  type: string
+                  example: Muhammad Salahudeen
+                customerid:
+                  type: integer
+                  example: '24'
+                userid:
+                  type: integer
+                  example: '38'
+                companyTypeId:
+                  type: integer
+                  example: '0'
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/project/add:
+    post:
+      tags:
+        - default
+      summary: Create Project
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                projectname:
+                  type: string
+                  example: ecommerce
+                customerid:
+                  type: integer
+                  example: '1'
+                startdate:
+                  type: string
+                  example: '2023-05-25 11:21:34'
+                salescontact:
+                  type: integer
+                  example: '9961909519'
+                approxvalue:
+                  type: integer
+                  example: '100000'
+                contactperson:
+                  type: string
+                  example: Saad
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/project/update:
+    post:
+      tags:
+        - default
+      summary: Update Project
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                projectname:
+                  type: string
+                  example: ecommerce
+                customerid:
+                  type: integer
+                  example: '1'
+                startdate:
+                  type: string
+                  example: '2023-05-25 11:21:34'
+                salescontact:
+                  type: integer
+                  example: '9961909519'
+                approxvalue:
+                  type: integer
+                  example: '10'
+                contactperson:
+                  type: string
+                  example: Saad
+                projectId:
+                  type: integer
+                  example: '1'
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/tasktype/add:
+    post:
+      tags:
+        - default
+      summary: Create Task Type
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                tasktypename:
+                  type: string
+                  example: Routepro
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/tasktype/update:
+    post:
+      tags:
+        - default
+      summary: UpdateTask Type
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                tasktypename:
+                  type: string
+                  example: Routepro
+                taskTypeId:
+                  type: integer
+                  example: '1'
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/country/add:
+    post:
+      tags:
+        - default
+      summary: Create Counrty
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                countrycode:
+                  type: integer
+                  example: '966'
+                countryname:
+                  type: string
+                  example: KSA
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/country/update:
+    post:
+      tags:
+        - default
+      summary: Update Counrty
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                countrycode:
+                  type: integer
+                  example: '966'
+                countryname:
+                  type: string
+                  example: KSA
+                CountryId:
+                  type: integer
+                  example: '1'
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/city/add:
+    post:
+      tags:
+        - default
+      summary: Create City
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                countryid:
+                  type: integer
+                  example: '1'
+                cityname:
+                  type: string
+                  example: Dammam
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/city/update:
+    post:
+      tags:
+        - default
+      summary: Update City
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                countryid:
+                  type: integer
+                  example: '1'
+                cityname:
+                  type: string
+                  example: Dammam2
+                cityid:
+                  type: integer
+                  example: '1'
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/task/status/update:
+    post:
+      tags:
+        - default
+      summary: Activity Status Update
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                taskid:
+                  type: integer
+                  description: Enter the Activityid  here
+                  example: '154'
+                userid:
+                  type: integer
+                  example: '4'
+                status:
+                  type: integer
+                  description: 1= Started  2= pause  3= completed
+                  example: '1'
+                comments:
+                  type: string
+                  example: started
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/task/add:
+    post:
+      tags:
+        - default
+      summary: Activity Creation
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                userid:
+                  type: integer
+                  example: '4'
+                customerid:
+                  type: integer
+                  example: '1'
+                projectid:
+                  type: integer
+                  example: '1'
+                reminder:
+                  type: string
+                  example: '2023-05-25 11:38:05'
+                comments:
+                  type: string
+                  example: Customer portal applicaion intrested
+                typeid:
+                  type: integer
+                  example: '1'
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/activity/update:
+    post:
+      tags:
+        - default
+      summary: Activity Update
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                userid:
+                  type: integer
+                  example: '4'
+                customerid:
+                  type: integer
+                  example: '1'
+                projectid:
+                  type: integer
+                  example: '1'
+                reminder:
+                  type: string
+                  example: '2023-05-25 11:38:05'
+                comments:
+                  type: string
+                  example: Customer portal applicaion intrestedss
+                typeid:
+                  type: integer
+                  example: '1'
+                activityid:
+                  type: integer
+                  example: '234'
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /ecom/crm/v2/crm/public/api/activity_comment/add:
+    post:
+      tags:
+        - default
+      summary: Activity Comments
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                userid:
+                  type: integer
+                  example: '4'
+                activityid:
+                  type: integer
+                  example: '2'
+                comment:
+                  type: string
+                  example: test
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
