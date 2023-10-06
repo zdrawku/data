@@ -40,7 +40,7 @@
         "country": "Germany2",
         "phone": "030-00743212",
         "fax": "030-00765452",
-        "ordersMin-nested-in-customer": [
+        "orders-min-nested-in-customer": [
           {
             "orderID": 10248,
             "productID": 11,
