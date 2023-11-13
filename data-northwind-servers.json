@@ -7,22 +7,22 @@
   "servers": [
     {
       "url": "https://data-northwind.indigo.design",
-      "description": Current server when hosted on AWS,
+      "description": "Current server when hosted on AWS",
       "variables": {}
     },
     {
       "url": "http://localhost:4200",
-      "description": When working locally,
+      "description": "When working locally",
       "variables": {}
     },
     {
       "url": "https://data-northwind.indigo.design",
-      "description": Production server,
+      "description": "Production server",
       "variables": {}
     },
     {
       "url": "https://staging.data-northwind.indigo.design",
-      "description": Nightly build server,
+      "description": "Nightly build server",
       "variables": {}
     }
   ],
