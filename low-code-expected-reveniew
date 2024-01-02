@@ -1,22 +1,50 @@
 [
     {
-        "Year": 2021,
-        "Revenue (Millions of U.S. Dollars)": 18497,
-        "Percentage Increase": 0
+        "year": 2021,
+        "lowCodeApplicationPlatforms": 6324,
+        "businessProcessAutomation": 2416,
+        "multiexperienceDevelopmentPlatforms": 2081,
+        "roboticProcessAutomation": 2350,
+        "integrationPlatformAsAService": 4680,
+        "citizenAutomationAndDevelopmentPlatforms": 554,
+        "otherLowCodeDevelopmentTechnologies": 92,
+        "total": 18497,
+        "percentageChange": 0
     },
     {
-        "Year": 2022,
-        "Revenue (Millions of U.S. Dollars)": 22462,
-        "Percentage Increase": 21.5
+        "year": 2022,
+        "lowCodeApplicationPlatforms": 7968,
+        "businessProcessAutomation": 2585,
+        "multiexperienceDevelopmentPlatforms": 2508,
+        "roboticProcessAutomation": 2892,
+        "integrationPlatformAsAService": 5668,
+        "citizenAutomationAndDevelopmentPlatforms": 732,
+        "otherLowCodeDevelopmentTechnologies": 109,
+        "total": 22462,
+        "percentageChange": 21.4
     },
     {
-        "Year": 2023,
-        "Revenue (Millions of U.S. Dollars)": 26869,
-        "Percentage Increase": 19.6
+        "year": 2023,
+        "lowCodeApplicationPlatforms": 9960,
+        "businessProcessAutomation": 2761,
+        "multiexperienceDevelopmentPlatforms": 2999,
+        "roboticProcessAutomation": 3401,
+        "integrationPlatformAsAService": 6668,
+        "citizenAutomationAndDevelopmentPlatforms": 953,
+        "otherLowCodeDevelopmentTechnologies": 126,
+        "total": 26869,
+        "percentageChange": 19.6
     },
     {
-        "Year": 2024,
-        "Revenue (Millions of U.S. Dollars)": 31949,
-        "Percentage Increase": 18.9
+        "year": 2024,
+        "lowCodeApplicationPlatforms": 12351,
+        "businessProcessAutomation": 2940,
+        "multiexperienceDevelopmentPlatforms": 3563,
+        "roboticProcessAutomation": 3879,
+        "integrationPlatformAsAService": 7838,
+        "citizenAutomationAndDevelopmentPlatforms": 1232,
+        "otherLowCodeDevelopmentTechnologies": 146,
+        "total": 31949,
+        "percentageChange": 18.9
     }
 ]
