@@ -299,7 +299,7 @@
       "get": {
         "tags": [
           "Categories"
-        ],,
+        ],
         "summary": "Returns a list of categories with ID",
         "description": "Optional extended description in ...",
         "parameters": [
