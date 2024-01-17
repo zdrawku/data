@@ -138,6 +138,8 @@
         "tags": [
           "Categories"
         ],
+        "summary": "Returns a list of categories",
+        "description": "Optional extended description in ...",
         "responses": {
           "200": {
             "description": "Success",
@@ -174,6 +176,8 @@
         "tags": [
           "Categories"
         ],
+        "summary": "Returns a list of categories",
+        "description": "Optional extended description in ...",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -233,6 +237,8 @@
         "tags": [
           "Categories"
         ],
+        "summary": "Returns a list of categories",
+        "description": "Optional extended description in ...",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -293,7 +299,9 @@
       "get": {
         "tags": [
           "Categories"
-        ],
+        ],,
+        "summary": "Returns a list of categories with ID",
+        "description": "Optional extended description in ...",
         "parameters": [
           {
             "name": "id",
@@ -469,6 +477,8 @@
         "tags": [
           "Customers"
         ],
+        "summary": "Returns a list of customers",
+        "description": "Optional extended description in ...",
         "responses": {
           "200": {
             "description": "Success",
@@ -564,6 +574,8 @@
         "tags": [
           "Customers"
         ],
+        "summary": "Returns a list of customers",
+        "description": "Optional extended description in ...",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
