@@ -6,7 +6,7 @@
     },
     "servers": [
       {
-        "url": "https://localhost:7244"
+        "url": "https://data-northwind.indigo.design"
       }
     ],
     "paths": {
