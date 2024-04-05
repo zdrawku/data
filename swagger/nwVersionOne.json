@@ -4,6 +4,11 @@
       "title": "Northwind CRUD",
       "version": "v1"
     },
+	"servers": [
+      {
+        "url": "https://data-northwind.indigo.design"
+      }
+    ],
     "paths": {
       "/Auth/Login": {
         "post": {
