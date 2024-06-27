@@ -1,0 +1,632 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "PercentageCalculator",
+        "version": "1.0"
+    },
+    "paths": {
+        "/PercentageCalculations": {
+            "get": {
+                "tags": [
+                    "PercentageCalculations"
+                ],
+                "operationId": "AccessPercentageCalculator",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/WeatherForecast"
+                                    }
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/WeatherForecast"
+                                    }
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/WeatherForecast"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/PercentageCalculations/CalcXisWhatPercentOfYCHANGED": {
+            "get": {
+                "tags": [
+                    "PercentageCalculations"
+                ],
+                "parameters": [
+                    {
+                        "name": "whatIs",
+                        "in": "query",
+                        "schema": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    },
+                    {
+                        "name": "ofWhat",
+                        "in": "query",
+                        "schema": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultModel"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultModel"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultModel"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/PercentageCalculations/CalcWhatIsPercentChangeFromXtoY": {
+            "get": {
+                "tags": [
+                    "PercentageCalculations"
+                ],
+                "parameters": [
+                    {
+                        "name": "whatIsCHANGED",
+                        "in": "query",
+                        "schema": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    },
+                    {
+                        "name": "ofWhat",
+                        "in": "query",
+                        "schema": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultModel"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultModel"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultModel"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/PercentageCalculations/CalcPercentageChange": {
+            "get": {
+                "tags": [
+                    "PercentageCalculations"
+                ],
+                "parameters": [
+                    {
+                        "name": "oldValue",
+                        "in": "query",
+                        "schema": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    },
+                    {
+                        "name": "newValue",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "format": "float"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultModel"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultModel"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultModel"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/PercentageCalculations/CalcPercentageChangeDUPLICATED": {
+            "get": {
+                "tags": [
+                    "PercentageCalculations"
+                ],
+                "parameters": [
+                    {
+                        "name": "oldValueChanged",
+                        "in": "query",
+                        "schema": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    },
+                    {
+                        "name": "newValue",
+                        "in": "query",
+                        "schema": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultModel"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultModel"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultModel"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/PercentageCalculations/CalcFinalPriceAfterDiscount": {
+            "get": {
+                "tags": [
+                    "PercentageCalculations"
+                ],
+                "parameters": [
+                    {
+                        "name": "originalPrice",
+                        "in": "query",
+                        "schema": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    },
+                    {
+                        "name": "discountRate",
+                        "in": "query",
+                        "schema": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PriceResultModel"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PriceResultModel"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PriceResultModel"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/PercentageCalculations/CalcTaxAmount": {
+            "get": {
+                "tags": [
+                    "PercentageCalculations"
+                ],
+                "parameters": [
+                    {
+                        "name": "purchasePrice",
+                        "in": "query",
+                        "schema": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    },
+                    {
+                        "name": "taxRate",
+                        "in": "query",
+                        "schema": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/TaxResultModel"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/TaxResultModel"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/TaxResultModel"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/PercentageCalculations/CalcTipAmount": {
+            "get": {
+                "tags": [
+                    "PercentageCalculations"
+                ],
+                "parameters": [
+                    {
+                        "name": "billAmount",
+                        "in": "query",
+                        "schema": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    },
+                    {
+                        "name": "tipRate",
+                        "in": "query",
+                        "schema": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/TipResultModel"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/TipResultModel"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/TipResultModel"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/PercentageCalculations/CalcFractionToPercentage": {
+            "get": {
+                "tags": [
+                    "PercentageCalculations"
+                ],
+                "parameters": [
+                    {
+                        "name": "numerator",
+                        "in": "query",
+                        "schema": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    },
+                    {
+                        "name": "denominator",
+                        "in": "query",
+                        "schema": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultModel"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultModel"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultModel"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/PercentageCalculations/CalcOriginalPriceBeforeTax": {
+            "get": {
+                "tags": [
+                    "PercentageCalculations"
+                ],
+                "parameters": [
+                    {
+                        "name": "totalPrice",
+                        "in": "query",
+                        "schema": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    },
+                    {
+                        "name": "taxRate",
+                        "in": "query",
+                        "schema": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PriceResultModel"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PriceResultModel"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PriceResultModel"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/PercentageCalculations/CalcPercentageAchieved": {
+            "get": {
+                "tags": [
+                    "PercentageCalculations"
+                ],
+                "parameters": [
+                    {
+                        "name": "amountAchieved",
+                        "in": "query",
+                        "schema": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    },
+                    {
+                        "name": "goal",
+                        "in": "query",
+                        "schema": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultModel"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultModel"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultModel"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/PercentageCalculations/CalcRelativePercentage": {
+            "get": {
+                "tags": [
+                    "PercentageCalculations"
+                ],
+                "parameters": [
+                    {
+                        "name": "part",
+                        "in": "query",
+                        "schema": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    },
+                    {
+                        "name": "whole",
+                        "in": "query",
+                        "schema": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultModel"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultModel"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultModel"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "PriceResultModel": {
+                "type": "object",
+                "properties": {
+                    "result": {
+                        "type": "number",
+                        "format": "float"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "ResultModel": {
+                "type": "object",
+                "properties": {
+                    "result": {
+                        "type": "number",
+                        "format": "float"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "TaxResultModel": {
+                "type": "object",
+                "properties": {
+                    "result": {
+                        "type": "number",
+                        "format": "float"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "TipResultModel": {
+                "type": "object",
+                "properties": {
+                    "result": {
+                        "type": "number",
+                        "format": "float"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "WeatherForecast": {
+                "type": "object",
+                "properties": {
+                    "date": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "temperatureC": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "temperatureF": {
+                        "type": "integer",
+                        "format": "int32",
+                        "readOnly": true
+                    },
+                    "summary": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            }
+        }
+    }
+}
