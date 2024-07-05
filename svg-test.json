@@ -7,6 +7,13 @@
       "Large": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjAwJyBoZWlnaHQ9JzIwMCcgdmlld0JveD0nMCAwIDEwMCAxMDAnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBvbHlnb24gcG9pbnRzPSc1MCw1IDk1LDI1IDk1LDc1IDUwLDk1IDUsNzUgNSwyNScgZmlsbD0ncmVkJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz48dGV4dCB4PSc1MCcgeT0nNTUnIGZvbnQtZmFtaWx5PScgQXJpYWwnIGZvbnQtc2l6ZT0nMjUnIGZpbGw9J3doaXRlJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBkb21pbmFudC1iYXNlbGluZT0nbWlkZGxlJ1NUT1A8L3RleHQ+PC9zdmc+",
       "ExtraLarge": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nNTAwJyBoZWlnaHQ9JzUwMCcgdmlld0JveD0nMCAwIDEwMCAxMDAnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBvbHlnb24gcG9pbnRzPSc1MCw1IDk1LDI1IDk1LDc1IDUwLDk1IDUsNzUgNSwyNScgZmlsbD0ncmVkJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz48dGV4dCB4PSc1MCcgeT0nNTUnIGZvbnQtZmFtaWx5PScgQXJpYWwnIGZvbnQtc2l6ZT0nMjUnIGZpbGw9J3doaXRlJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBkb21pbmFudC1iYXNlbGluZT0nbWlkZGxlJ1NUT1A8L3RleHQ+PC9zdmc+",
       "UltraLarge": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTAwMCcgaGVpZ2h0PScxMDAwJyB2aWV3Qm94PScwIDAgMTAwIDEwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cG9seWdvbiBwb2ludHM9JzUwLDUgOTUsMjUgOTUsNzUgNTAsOTUgNSw3NSA1LDI1JyBmaWxsPSdyZWQnIHN0cm9rZT0nYmxhY2snIHN0cm9rZS13aWR0aD0nMicvPjx0ZXh0IHg9JzUwJyB5PSc1NScgZm9udC1mYW1pbHk9J0FyaWFsJyBmb250LXNpemU9JzI1JyBmaWxsPSd3aGl0ZScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZSc+U1RPUDwvdGV4dD48L3N2Zz4="
+    },
+    {
+      "ID": "1",
+      "Medium": "https://upload.wikimedia.org/wikipedia/commons/7/70/Example.png",
+      "Large": "https://upload.wikimedia.org/wikipedia/commons/7/70/Example.png",
+      "ExtraLarge": "https://svgur.com/i/17uU.svg",
+      "UltraLarge": "https://svgur.com/i/17uU.svg"
     }
   ]
 }
