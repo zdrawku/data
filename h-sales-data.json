@@ -1,0 +1,199 @@
+[
+    {
+        "Region": "North America",
+        "Countries": [
+            {
+                "Country": "USA",
+                "Cities": [
+                    { "City": "New York", "Sales(USD)": 120000, "Transactions": 450 },
+                    { "City": "Los Angeles", "Sales(USD)": 95000, "Transactions": 320 }
+                ]
+            },
+            {
+                "Country": "Canada",
+                "Cities": [
+                    { "City": "Toronto", "Sales(USD)": 80000, "Transactions": 280 },
+                    { "City": "Vancouver", "Sales(USD)": 75000, "Transactions": 260 }
+                ]
+            },
+            {
+                "Country": "Mexico",
+                "Cities": [
+                    { "City": "Mexico City", "Sales(USD)": 70000, "Transactions": 230 },
+                    { "City": "Guadalajara", "Sales(USD)": 68000, "Transactions": 220 }
+                ]
+            }
+        ]
+    },
+    {
+        "Region": "Europe",
+        "Countries": [
+            {
+                "Country": "Germany",
+                "Cities": [
+                    { "City": "Berlin", "Sales(USD)": 70000, "Transactions": 200 },
+                    { "City": "Munich", "Sales(USD)": 65000, "Transactions": 190 }
+                ]
+            },
+            {
+                "Country": "France",
+                "Cities": [
+                    { "City": "Paris", "Sales(USD)": 60000, "Transactions": 210 },
+                    { "City": "Lyon", "Sales(USD)": 55000, "Transactions": 180 }
+                ]
+            },
+            {
+                "Country": "Italy",
+                "Cities": [
+                    { "City": "Rome", "Sales(USD)": 62000, "Transactions": 240 },
+                    { "City": "Milan", "Sales(USD)": 59000, "Transactions": 220 }
+                ]
+            }
+        ]
+    },
+    {
+        "Region": "Asia",
+        "Countries": [
+            {
+                "Country": "India",
+                "Cities": [
+                    { "City": "Mumbai", "Sales(USD)": 90000, "Transactions": 400 },
+                    { "City": "Delhi", "Sales(USD)": 85000, "Transactions": 380 }
+                ]
+            },
+            {
+                "Country": "China",
+                "Cities": [
+                    { "City": "Shanghai", "Sales(USD)": 92000, "Transactions": 410 },
+                    { "City": "Beijing", "Sales(USD)": 87000, "Transactions": 390 }
+                ]
+            },
+            {
+                "Country": "Japan",
+                "Cities": [
+                    { "City": "Tokyo", "Sales(USD)": 98000, "Transactions": 420 },
+                    { "City": "Osaka", "Sales(USD)": 85000, "Transactions": 370 }
+                ]
+            }
+        ]
+    },
+    {
+        "Region": "South America",
+        "Countries": [
+            {
+                "Country": "Brazil",
+                "Cities": [
+                    { "City": "São Paulo", "Sales(USD)": 70000, "Transactions": 250 },
+                    { "City": "Rio de Janeiro", "Sales(USD)": 68000, "Transactions": 240 }
+                ]
+            },
+            {
+                "Country": "Argentina",
+                "Cities": [
+                    { "City": "Buenos Aires", "Sales(USD)": 65000, "Transactions": 210 },
+                    { "City": "Córdoba", "Sales(USD)": 60000, "Transactions": 200 }
+                ]
+            }
+        ]
+    },
+    {
+        "Region": "Africa",
+        "Countries": [
+            {
+                "Country": "South Africa",
+                "Cities": [
+                    { "City": "Johannesburg", "Sales(USD)": 55000, "Transactions": 180 },
+                    { "City": "Cape Town", "Sales(USD)": 50000, "Transactions": 160 }
+                ]
+            },
+            {
+                "Country": "Nigeria",
+                "Cities": [
+                    { "City": "Lagos", "Sales(USD)": 48000, "Transactions": 170 },
+                    { "City": "Abuja", "Sales(USD)": 45000, "Transactions": 150 }
+                ]
+            }
+        ]
+    },
+    {
+        "Region": "Australia",
+        "Countries": [
+            {
+                "Country": "Australia",
+                "Cities": [
+                    { "City": "Sydney", "Sales(USD)": 70000, "Transactions": 300 },
+                    { "City": "Melbourne", "Sales(USD)": 68000, "Transactions": 290 }
+                ]
+            },
+            {
+                "Country": "New Zealand",
+                "Cities": [
+                    { "City": "Auckland", "Sales(USD)": 60000, "Transactions": 220 },
+                    { "City": "Wellington", "Sales(USD)": 58000, "Transactions": 210 }
+                ]
+            }
+        ]
+    },
+    {
+        "Region": "Middle East",
+        "Countries": [
+            {
+                "Country": "UAE",
+                "Cities": [
+                    { "City": "Dubai", "Sales(USD)": 90000, "Transactions": 420 },
+                    { "City": "Abu Dhabi", "Sales(USD)": 85000, "Transactions": 380 }
+                ]
+            },
+            {
+                "Country": "Saudi Arabia",
+                "Cities": [
+                    { "City": "Riyadh", "Sales(USD)": 75000, "Transactions": 310 },
+                    { "City": "Jeddah", "Sales(USD)": 72000, "Transactions": 300 }
+                ]
+            }
+        ]
+    },
+    {
+        "Region": "Antarctica",
+        "Countries": [
+            {
+                "Country": "Research Bases",
+                "Cities": [
+                    { "City": "Base Alpha", "Sales(USD)": 20000, "Transactions": 20 },
+                    { "City": "Base Beta", "Sales(USD)": 18000, "Transactions": 15 }
+                ]
+            }
+        ]
+    },
+    {
+        "Region": "Arctic",
+        "Countries": [
+            {
+                "Country": "Research Zones",
+                "Cities": [
+                    { "City": "Zone A", "Sales(USD)": 15000, "Transactions": 10 },
+                    { "City": "Zone B", "Sales(USD)": 12000, "Transactions": 8 }
+                ]
+            }
+        ]
+    },
+    {
+        "Region": "Pacific Islands",
+        "Countries": [
+            {
+                "Country": "Fiji",
+                "Cities": [
+                    { "City": "Suva", "Sales(USD)": 40000, "Transactions": 150 },
+                    { "City": "Nadi", "Sales(USD)": 38000, "Transactions": 140 }
+                ]
+            },
+            {
+                "Country": "Hawaii",
+                "Cities": [
+                    { "City": "Honolulu", "Sales(USD)": 50000, "Transactions": 200 },
+                    { "City": "Maui", "Sales(USD)": 48000, "Transactions": 190 }
+                ]
+            }
+        ]
+    }
+]
