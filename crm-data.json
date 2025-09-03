@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Home"
+  },
+  {
+    "id": 2,
+    "name": "Accounts"
+  },
+  {
+    "id": 3,
+    "name": "Contacts"
+  },
+  {
+    "id": 4,
+    "name": "Reports"
+  },
+  {
+    "id": 5,
+    "name": "Calendar"
+  },
+  {
+    "id": 6,
+    "name": "Tasks"
+  }
+]
