@@ -5,6 +5,11 @@
     "description": "Provides information about countries including name, region, population, flags, and more.",
     "version": "v3.1"
   },
+  "servers": [
+    {
+      "url": "https://restcountries.com"
+    }
+  ],
   "paths": {
     "/v3.1/all": {
       "get": {
